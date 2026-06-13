@@ -1,0 +1,83 @@
+.food-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  border-left: 6rpx solid transparent;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.04);
+}
+
+.food-card.expiring {
+  border-left-color: #f44336;
+  background: #FFFBFB;
+}
+
+.food-card.low-stock {
+  border-left-color: #FF9800;
+  background: #FFFDF8;
+}
+
+.food-card.expiring.low-stock {
+  border-left-color: #f44336;
+}
+
+.name-text {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.common-tag {
+  font-size: 20rpx;
+  color: #4CAF50;
+  background: #E8F5E9;
+  padding: 2rpx 12rpx;
+  border-radius: 8rpx;
+  margin-left: 12rpx;
+}
+
+.food-badges {
+  gap: 8rpx;
+}
+
+.quantity-text {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #333;
+}
+
+.unit-text {
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 4rpx;
+}
+
+.food-note {
+  background: #f9f9f9;
+  padding: 12rpx;
+  border-radius: 8rpx;
+}
+
+.food-actions {
+  gap: 16rpx;
+  border-top: 1rpx solid #f0f0f0;
+  padding-top: 20rpx;
+}
+
+.action-btn {
+  flex: 1;
+  text-align: center;
+  padding: 14rpx 0;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+}
+
+.edit-btn {
+  background: #E8F5E9;
+  color: #4CAF50;
+}
+
+.delete-btn {
+  background: #FFEBEE;
+  color: #f44336;
+}

@@ -1,0 +1,59 @@
+<view class="container">
+  <view class="page-header">
+    <text class="header-title">📋 制作记录</text>
+    <text class="text-sm text-muted mt-12">共 {{records.length}} 条记录</text>
+  </view>
+
+  <!-- 记录列表 -->
+  <view wx:if="{{records.length > 0}}">
+    <view wx:for="{{records}}" wx:key="id" class="card record-card" bindtap="onRecordTap" data-id="{{item.recipeId}}">
+      <!-- 头部 -->
+      <view class="flex-between">
+        <view>
+          <text class="record-name">{{item.recipeName}}</text>
+          <text class="record-date ml-12 text-sm text-muted">{{item.cookDate}}</text>
+        </view>
+        <view class="flex-row">
+          <text class="record-rating">{{item.stars}}</text>
+        </view>
+      </view>
+
+      <!-- 标签 -->
+      <view class="tag-row flex-wrap mt-12">
+        <text wx:for="{{item.tasteTags}}" wx:key="*this" class="tag tag-orange">{{item}}</text>
+        <text wx:for="{{item.textureTags}}" wx:key="*this" class="tag tag-gray">{{item}}</text>
+        <text wx:for="{{item.portionTags}}" wx:key="*this" class="tag tag-blue">{{item}}</text>
+        <text wx:for="{{item.difficultyTags}}" wx:key="*this" class="tag tag-gray">{{item}}</text>
+      </view>
+
+      <!-- 消耗 -->
+      <view class="consumes mt-12">
+        <text class="text-sm text-muted">消耗：</text>
+        <text wx:for="{{item.consumptions}}" wx:key="foodId" class="text-sm text-muted">
+          {{item.foodName}} {{item.actual}}{{item.unit}}
+          <text wx:if="{{index < item.consumptions.length - 1}}">、</text>
+        </text>
+      </view>
+
+      <!-- 备注 & 提醒 -->
+      <view wx:if="{{item.note}}" class="record-note mt-12">
+        <text class="text-sm text-muted">备注：{{item.note}}</text>
+      </view>
+      <view wx:if="{{item.nextReminder}}" class="record-reminder mt-12">
+        <text class="text-sm text-warning">💡 下次：{{item.nextReminder}}</text>
+      </view>
+
+      <view class="record-footer mt-24 flex-between">
+        <text class="text-sm text-muted">实际用时：{{item.actualTime}}分钟</text>
+        <text class="text-sm text-primary">查看食谱 →</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view wx:else class="empty-state">
+    <text class="empty-icon">📝</text>
+    <text>还没有制作记录</text>
+    <text class="text-sm text-muted mt-12">完成食谱制作后会自动记录</text>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="rating">
+  <view class="stars flex-row">
+    <text
+      wx:for="{{[1,2,3,4,5]}}"
+      wx:key="*this"
+      class="star {{index < currentRating ? 'active' : ''}} {{readonly ? 'readonly' : ''}}"
+      data-rating="{{item}}"
+      catchtap="{{readonly ? '' : 'onRate'}}"
+    >
+      {{index < currentRating ? '★' : '☆'}}
+    </text>
+    <text wx:if="{{!readonly}}" class="rating-text ml-12">{{ratingLabels[currentRating] || ''}}</text>
+  </view>
+</view>

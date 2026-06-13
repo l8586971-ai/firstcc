@@ -1,0 +1,56 @@
+.page-header {
+  padding: 20rpx 0;
+}
+
+.header-title {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.quick-input-card {
+  background: #F1F8E9;
+  border: 2rpx dashed #AED581;
+}
+
+.quick-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #558B2F;
+}
+
+.quick-btn {
+  padding: 16rpx 32rpx;
+  font-size: 28rpx;
+  flex-shrink: 0;
+  border-radius: 12rpx;
+}
+
+.picker-field {
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  border: 1rpx solid #ddd;
+  border-radius: 12rpx;
+  padding: 0 24rpx;
+  font-size: 28rpx;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.section-label {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.save-area {
+  padding-bottom: 40rpx;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 24rpx;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  text-align: center;
+}

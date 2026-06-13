@@ -1,0 +1,41 @@
+<view class="container" wx:if="{{recipe}}">
+  <!-- 食谱信息 -->
+  <view class="cooking-header">
+    <text class="cooking-title">👨‍🍳 {{recipe.name}}</text>
+    <text class="cooking-meta text-sm text-muted mt-12">
+      {{recipe.difficultyLabel}} · {{recipe.cookTime}}分钟 · {{recipe.servings}}人份
+    </text>
+  </view>
+
+  <!-- 跟做步骤 -->
+  <view class="cooking-steps mt-24">
+    <step-indicator
+      steps="{{recipe.steps}}"
+      hints="{{hints}}"
+      current="{{currentStep}}"
+      bind:change="onStepChange"
+      bind:finish="onFinish"
+    />
+  </view>
+
+  <!-- 快捷操作 -->
+  <view class="quick-tips mt-24">
+    <text class="tips-title">💡 小贴士</text>
+    <text wx:if="{{recipe.tips}}" class="tips-text mt-12">{{recipe.tips}}</text>
+
+    <view wx:if="{{lastRecord && lastRecord.nextReminder}}" class="last-reminder mt-12">
+      <text class="text-sm text-warning">上次提醒：{{lastRecord.nextReminder}}</text>
+    </view>
+  </view>
+
+  <!-- 完成按钮 -->
+  <view class="finish-area mt-24">
+    <view class="btn-primary finish-btn" bindtap="onFinish">
+      <text>✅ 全部完成，去记录</text>
+    </view>
+  </view>
+</view>
+
+<view wx:else class="empty-state">
+  <text>加载中...</text>
+</view>

@@ -1,0 +1,82 @@
+<view class="container">
+  <view class="page-header">
+    <text class="header-title">⭐ 我的菜谱</text>
+  </view>
+
+  <!-- 最常做 -->
+  <view wx:if="{{topCooked.length > 0}}" class="card">
+    <text class="section-label">🔥 最常做</text>
+    <view wx:for="{{topCooked}}" wx:key="recipeId" class="rank-item" bindtap="onRecipeTap" data-id="{{item.recipeId}}">
+      <view class="flex-between">
+        <view class="flex-row">
+          <text class="rank-num">{{index + 1}}</text>
+          <text class="rank-name">{{item.recipeName}}</text>
+        </view>
+        <view class="flex-row">
+          <text class="rank-count">{{item.cookCount}} 次</text>
+          <text class="arrow ml-12">→</text>
+        </view>
+      </view>
+      <view wx:if="{{item.avgRating > 0}}" class="mt-12">
+        <text class="text-sm text-muted">评分：{{item.stars}} {{item.avgRating}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 最高评分 -->
+  <view wx:if="{{topRated.length > 0}}" class="card mt-24">
+    <text class="section-label">🌟 最高评分</text>
+    <view wx:for="{{topRated}}" wx:key="recipeId" class="rank-item" bindtap="onRecipeTap" data-id="{{item.recipeId}}">
+      <view class="flex-between">
+        <view class="flex-row">
+          <text class="rank-num">{{index + 1}}</text>
+          <text class="rank-name">{{item.recipeName}}</text>
+        </view>
+        <view class="flex-row">
+          <text class="rank-count">{{item.stars}} {{item.avgRating}}</text>
+          <text class="arrow ml-12">→</text>
+        </view>
+      </view>
+      <view class="mt-12">
+        <text class="text-sm text-muted">制作 {{item.cookCount}} 次</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 最近制作 -->
+  <view wx:if="{{recentMade.length > 0}}" class="card mt-24">
+    <text class="section-label">🕐 最近制作</text>
+    <view wx:for="{{recentMade}}" wx:key="id" class="rank-item" bindtap="onRecipeTap" data-id="{{item.recipeId}}">
+      <view class="flex-between">
+        <view class="flex-row">
+          <text class="rank-num">{{index + 1}}</text>
+          <view>
+            <text class="rank-name">{{item.recipeName}}</text>
+            <text class="rank-date text-sm text-muted">{{item.cookDate}}</text>
+          </view>
+        </view>
+        <view class="flex-row">
+          <text wx:if="{{item.nextReminder}}" class="text-sm text-warning">💡{{item.nextReminder}}</text>
+          <text class="arrow ml-12">→</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 收藏菜谱 -->
+  <view class="card mt-24">
+    <text class="section-label">❤️ 收藏菜谱</text>
+    <view class="empty-sub-state">
+      <text class="text-sm text-muted">V1 暂无收藏功能，敬请期待</text>
+    </view>
+  </view>
+
+  <!-- 历史记录入口 -->
+  <view class="card mt-24" bindtap="onHistory">
+    <view class="flex-between">
+      <text class="section-label">📋 历史制作记录</text>
+      <text class="arrow">→</text>
+    </view>
+    <text class="text-sm text-muted mt-12">查看所有制作记录</text>
+  </view>
+</view>

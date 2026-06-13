@@ -1,0 +1,144 @@
+.header {
+  padding: 40rpx 0 24rpx;
+}
+
+.header-title {
+  font-size: 44rpx;
+  font-weight: 700;
+  color: #333;
+  display: block;
+}
+
+.header-sub {
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 8rpx;
+  display: block;
+}
+
+.today-rec {
+  background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+  border: none;
+}
+
+.today-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #2E7D32;
+}
+
+.today-desc {
+  font-size: 24rpx;
+  color: #4CAF50;
+  display: block;
+}
+
+.arrow {
+  font-size: 36rpx;
+  color: #999;
+}
+
+.generate-btn {
+  background: #4CAF50;
+  color: #fff;
+  text-align: center;
+  padding: 24rpx;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.reminder-card {
+  padding: 20rpx 24rpx;
+}
+
+.reminder-card.danger {
+  border-left: 6rpx solid #f44336;
+}
+
+.reminder-card.warning {
+  border-left: 6rpx solid #FF9800;
+}
+
+.reminder-card.all-good {
+  border-left: 6rpx solid #4CAF50;
+  margin-bottom: 0;
+}
+
+.reminder-icon {
+  font-size: 40rpx;
+  margin-right: 16rpx;
+}
+
+.reminder-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  display: block;
+}
+
+.reminder-count {
+  font-size: 24rpx;
+  display: block;
+  margin-top: 4rpx;
+}
+
+.expiring-item {
+  padding: 8rpx 0;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16rpx;
+}
+
+.action-item {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 32rpx 24rpx;
+  text-align: center;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.04);
+}
+
+.action-icon {
+  font-size: 48rpx;
+  display: block;
+  margin-bottom: 12rpx;
+}
+
+.action-text {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.recent-item {
+  padding: 20rpx 24rpx;
+}
+
+.recent-name {
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.recent-date {
+  font-size: 24rpx;
+  color: #bbb;
+}
+
+.recent-rating {
+  font-size: 24rpx;
+}
+
+.recent-reminder {
+  background: #FFF8E1;
+  padding: 8rpx 16rpx;
+  border-radius: 8rpx;
+}

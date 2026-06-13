@@ -1,0 +1,135 @@
+<view class="container" wx:if="{{recipe}}">
+  <view class="page-header">
+    <text class="header-title">✅ 完成记录</text>
+    <text class="header-sub mt-12">{{recipe.name}}</text>
+  </view>
+
+  <!-- 食材消耗 -->
+  <view class="card">
+    <text class="section-label">📦 食材消耗</text>
+    <view class="consumption-list mt-24">
+      <view wx:for="{{consumptions}}" wx:key="foodId" class="consume-item">
+        <view class="flex-between">
+          <text class="consume-name">{{item.foodName}}</text>
+          <text class="text-sm text-muted">当前库存：{{item.currentStock}}{{item.unit}}</text>
+        </view>
+        <view class="consume-input flex-between mt-12">
+          <text class="text-sm text-muted">预计消耗：{{item.planned}}{{item.unit}}</text>
+          <view class="flex-row">
+            <text class="mr-12">实际消耗：</text>
+            <input
+              class="consume-field"
+              type="digit"
+              value="{{item.actual}}"
+              bindinput="onConsumeInput"
+              data-index="{{index}}"
+            />
+            <text class="ml-12">{{item.unit}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 评价 -->
+  <view class="card mt-24">
+    <text class="section-label">⭐ 本次评价</text>
+
+    <!-- 评分 -->
+    <view class="eval-item mt-24">
+      <text class="eval-label">评分</text>
+      <rating-display rating="{{rating}}" bind:rate="onRate" />
+    </view>
+
+    <!-- 实际用时 -->
+    <view class="eval-item mt-24">
+      <text class="eval-label">实际用时（分钟）</text>
+      <input class="input-field short-field" type="digit" value="{{actualTime}}" bindinput="onTimeInput" placeholder="{{recipe.cookTime}}" />
+    </view>
+
+    <!-- 味道标签 -->
+    <view class="eval-item mt-24">
+      <text class="eval-label">味道</text>
+      <view class="tag-select flex-wrap mt-12">
+        <text
+          wx:for="{{tasteTagOptions}}"
+          wx:key="*this"
+          class="tag {{selectedTasteTags.indexOf(item) >= 0 ? 'tag-orange' : 'tag-gray'}}"
+          bindtap="onToggleTasteTag"
+          data-tag="{{item}}"
+        >{{item}}</text>
+      </view>
+    </view>
+
+    <!-- 口感标签 -->
+    <view class="eval-item mt-24">
+      <text class="eval-label">口感</text>
+      <view class="tag-select flex-wrap mt-12">
+        <text
+          wx:for="{{textureTagOptions}}"
+          wx:key="*this"
+          class="tag {{selectedTextureTags.indexOf(item) >= 0 ? 'tag-orange' : 'tag-gray'}}"
+          bindtap="onToggleTextureTag"
+          data-tag="{{item}}"
+        >{{item}}</text>
+      </view>
+    </view>
+
+    <!-- 分量标签 -->
+    <view class="eval-item mt-24">
+      <text class="eval-label">分量</text>
+      <view class="tag-select flex-wrap mt-12">
+        <text
+          wx:for="{{portionTagOptions}}"
+          wx:key="*this"
+          class="tag {{selectedPortionTags.indexOf(item) >= 0 ? 'tag-orange' : 'tag-gray'}}"
+          bindtap="onTogglePortionTag"
+          data-tag="{{item}}"
+        >{{item}}</text>
+      </view>
+    </view>
+
+    <!-- 难度标签 -->
+    <view class="eval-item mt-24">
+      <text class="eval-label">难度感受</text>
+      <view class="tag-select flex-wrap mt-12">
+        <text
+          wx:for="{{difficultyTagOptions}}"
+          wx:key="*this"
+          class="tag {{selectedDifficultyTags.indexOf(item) >= 0 ? 'tag-orange' : 'tag-gray'}}"
+          bindtap="onToggleDifficultyTag"
+          data-tag="{{item}}"
+        >{{item}}</text>
+      </view>
+    </view>
+
+    <!-- 文字备注 -->
+    <view class="eval-item mt-24">
+      <text class="eval-label">备注</text>
+      <textarea
+        class="input-field note-field"
+        value="{{note}}"
+        bindinput="onNoteInput"
+        placeholder="记录味道调整、注意事项..."
+        auto-height
+      />
+    </view>
+
+    <!-- 下次提醒 -->
+    <view class="eval-item mt-24">
+      <text class="eval-label">下次提醒</text>
+      <input class="input-field" value="{{nextReminder}}" bindinput="onReminderInput" placeholder="例如：少放盐、多焖2分钟" />
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class="submit-area mt-24">
+    <view class="btn-primary submit-btn" bindtap="onSubmit">
+      <text>✅ 确认提交并扣减库存</text>
+    </view>
+  </view>
+</view>
+
+<view wx:else class="empty-state">
+  <text>加载中...</text>
+</view>

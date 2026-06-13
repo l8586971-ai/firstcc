@@ -1,0 +1,50 @@
+.cooking-header {
+  padding: 24rpx 0;
+}
+
+.cooking-title {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #333;
+  display: block;
+}
+
+.cooking-meta {
+  display: block;
+}
+
+.quick-tips {
+  background: #FFF8E1;
+  border-radius: 12rpx;
+  padding: 20rpx 24rpx;
+}
+
+.tips-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #F57F17;
+}
+
+.tips-text {
+  font-size: 26rpx;
+  color: #666;
+  display: block;
+}
+
+.last-reminder {
+  background: #FFF3E0;
+  padding: 12rpx 16rpx;
+  border-radius: 8rpx;
+}
+
+.finish-area {
+  padding-bottom: 40rpx;
+}
+
+.finish-btn {
+  width: 100%;
+  padding: 24rpx;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  text-align: center;
+}

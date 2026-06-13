@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "rating-display": "/components/rating/rating"
+  },
+  "navigationBarTitleText": "食谱详情"
+}

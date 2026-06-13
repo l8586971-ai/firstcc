@@ -1,0 +1,44 @@
+.page-header {
+  padding: 20rpx 0;
+}
+
+.header-title {
+  font-size: 36rpx;
+  font-weight: 700;
+  display: block;
+}
+
+.record-name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.record-rating {
+  font-size: 24rpx;
+}
+
+.tag-row {
+  gap: 8rpx;
+}
+
+.consumes {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.record-note {
+  background: #f9f9f9;
+  padding: 12rpx;
+  border-radius: 8rpx;
+}
+
+.record-reminder {
+  background: #FFF8E1;
+  padding: 12rpx;
+  border-radius: 8rpx;
+}
+
+.record-footer {
+  border-top: 1rpx solid #f5f5f5;
+  padding-top: 16rpx;
+}

@@ -1,0 +1,42 @@
+<view class="food-card {{expiring ? 'expiring' : ''}} {{lowStock ? 'low-stock' : ''}}" bindtap="onTap">
+  <view class="food-header flex-between">
+    <view class="food-name flex-row">
+      <text class="name-text">{{food.name}}</text>
+      <text wx:if="{{food.isCommon}}" class="common-tag">常备</text>
+    </view>
+    <view class="food-badges flex-row">
+      <text wx:if="{{expiring}}" class="badge badge-danger">临期{{expiryDays}}天</text>
+      <text wx:if="{{expired}}" class="badge badge-danger">已过期</text>
+      <text wx:if="{{lowStock}}" class="badge badge-warning">低库存</text>
+    </view>
+  </view>
+
+  <view class="food-body flex-between mt-12">
+    <view class="food-info">
+      <text class="tag tag-green">{{food.category}}</text>
+      <text class="tag tag-gray">{{food.storageLocation}}</text>
+    </view>
+    <view class="food-quantity">
+      <text class="quantity-text">{{food.quantity}}</text>
+      <text class="unit-text">{{food.unit}}</text>
+    </view>
+  </view>
+
+  <view class="food-footer flex-between mt-12 text-sm text-muted">
+    <text>到期: {{food.expiryDate}}</text>
+    <text>预警: &lt; {{food.warningThreshold}} {{food.thresholdUnit}}</text>
+  </view>
+
+  <view wx:if="{{food.note}}" class="food-note mt-12 text-sm text-muted">
+    <text>备注: {{food.note}}</text>
+  </view>
+
+  <view wx:if="{{showActions}}" class="food-actions flex-row mt-24">
+    <view class="action-btn edit-btn" catchtap="onEdit">
+      <text>编辑</text>
+    </view>
+    <view class="action-btn delete-btn" catchtap="onDelete">
+      <text>删除</text>
+    </view>
+  </view>
+</view>

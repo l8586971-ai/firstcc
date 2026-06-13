@@ -1,0 +1,111 @@
+<view class="container">
+  <view class="page-header">
+    <text class="header-title">{{isEdit ? '编辑食材' : '添加食材'}}</text>
+  </view>
+
+  <!-- 极简输入模式 -->
+  <view class="card quick-input-card">
+    <text class="quick-title">⚡ 极简输入</text>
+    <text class="quick-desc text-sm text-muted mt-12">直接输入 "食材名 数量 单位"，如：番茄 3 个</text>
+    <view class="flex-row mt-24">
+      <input
+        class="input-field flex-1"
+        placeholder="例如：番茄 3 个"
+        value="{{quickInput}}"
+        bindinput="onQuickInput"
+        bindconfirm="onQuickParse"
+      />
+      <view class="btn-primary quick-btn ml-12" bindtap="onQuickParse">
+        <text>识别</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 手动填写 -->
+  <view class="card mt-24">
+    <text class="section-label">📝 详细信息</text>
+
+    <!-- 食材名称 -->
+    <view class="input-group mt-24">
+      <text class="input-label">食材名称 *</text>
+      <input class="input-field" placeholder="输入食材名称" value="{{form.name}}" bindinput="onFieldInput" data-field="name" />
+    </view>
+
+    <!-- 分类 -->
+    <view class="input-group">
+      <text class="input-label">分类</text>
+      <picker mode="selector" range="{{categories}}" range-key="name" value="{{categoryIndex}}" bindchange="onCategoryChange">
+        <view class="picker-field">{{categories[categoryIndex].name}}</view>
+      </picker>
+    </view>
+
+    <!-- 数量 & 单位 -->
+    <view class="flex-row">
+      <view class="input-group flex-1">
+        <text class="input-label">数量 *</text>
+        <input class="input-field" type="digit" placeholder="0" value="{{form.quantity}}" bindinput="onFieldInput" data-field="quantity" />
+      </view>
+      <view class="input-group flex-1 ml-12">
+        <text class="input-label">单位</text>
+        <picker mode="selector" range="{{units}}" value="{{unitIndex}}" bindchange="onUnitChange">
+          <view class="picker-field">{{units[unitIndex]}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <!-- 存放位置 -->
+    <view class="input-group">
+      <text class="input-label">存放位置</text>
+      <picker mode="selector" range="{{storageLocations}}" value="{{locationIndex}}" bindchange="onLocationChange">
+        <view class="picker-field">{{storageLocations[locationIndex]}}</view>
+      </picker>
+    </view>
+
+    <!-- 购买日期 & 到期日期 -->
+    <view class="flex-row">
+      <view class="input-group flex-1">
+        <text class="input-label">购买日期</text>
+        <picker mode="date" value="{{form.purchaseDate}}" bindchange="onDateChange" data-field="purchaseDate">
+          <view class="picker-field">{{form.purchaseDate || '选择日期'}}</view>
+        </picker>
+      </view>
+      <view class="input-group flex-1 ml-12">
+        <text class="input-label">到期日期</text>
+        <picker mode="date" value="{{form.expiryDate}}" bindchange="onDateChange" data-field="expiryDate">
+          <view class="picker-field">{{form.expiryDate || '选择日期'}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <!-- 预警阈值 -->
+    <view class="input-group">
+      <text class="input-label">预警阈值</text>
+      <view class="flex-row">
+        <input class="input-field flex-1" type="digit" placeholder="0" value="{{form.warningThreshold}}" bindinput="onFieldInput" data-field="warningThreshold" />
+        <text class="ml-12">库存低于此值时提醒</text>
+      </view>
+    </view>
+
+    <!-- 是否常备 -->
+    <view class="input-group flex-between">
+      <text class="input-label">设为常备食材</text>
+      <switch checked="{{form.isCommon}}" bindchange="onSwitchChange" color="#4CAF50" />
+    </view>
+
+    <!-- 备注 -->
+    <view class="input-group">
+      <text class="input-label">备注</text>
+      <input class="input-field" placeholder="备注信息（可选）" value="{{form.note}}" bindinput="onFieldInput" data-field="note" />
+    </view>
+  </view>
+
+  <!-- 保存按钮 -->
+  <view class="save-area mt-24">
+    <view class="btn-primary save-btn" bindtap="onSave">
+      <text>{{isEdit ? '保存修改' : '添加到冰箱'}}</text>
+    </view>
+    <view wx:if="{{isEdit}}" class="btn-danger save-btn mt-24" bindtap="onDelete">
+      <text>删除此食材</text>
+    </view>
+  </view>
+</view>

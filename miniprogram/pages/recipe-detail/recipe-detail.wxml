@@ -1,0 +1,147 @@
+<view class="container" wx:if="{{recipe}}">
+  <!-- 上次制作提醒 -->
+  <view wx:if="{{lastRecord && lastRecord.nextReminder}}" class="reminder-banner">
+    <text class="reminder-icon">💡</text>
+    <text>上次提醒：{{lastRecord.nextReminder}}</text>
+  </view>
+
+  <!-- 基本信息 -->
+  <view class="card detail-header">
+    <view class="flex-between">
+      <text class="detail-name">{{recipe.name}}</text>
+      <text class="tag tag-green">{{recipe.category}}</text>
+    </view>
+
+    <view class="detail-meta flex-row mt-24">
+      <view class="meta-item">
+        <text class="meta-value">{{recipe.difficultyLabel}}</text>
+        <text class="meta-label">难度</text>
+      </view>
+      <view class="meta-item">
+        <text class="meta-value">{{recipe.cookTime}}分钟</text>
+        <text class="meta-label">耗时</text>
+      </view>
+      <view class="meta-item">
+        <text class="meta-value">{{recipe.servings}}人</text>
+        <text class="meta-label">份量</text>
+      </view>
+      <view class="meta-item">
+        <text class="meta-value match-rate {{matchClass}}">{{recipe.matchRate}}%</text>
+        <text class="meta-label">匹配度</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 食材信息 -->
+  <view class="card mt-24">
+    <text class="section-label">📋 所需食材</text>
+
+    <view class="ing-list mt-24">
+      <view wx:for="{{recipe.ingredients}}" wx:key="name" class="ing-row flex-between">
+        <text class="ing-name">{{item.name}}</text>
+        <view class="flex-row">
+          <text class="ing-amount">需要 {{item.amount}}{{item.unit}}</text>
+          <text wx:if="{{item.stockQuantity >= 0}}" class="ing-stock ml-12 {{item.stockQuantity >= item.amount ? 'text-primary' : 'text-warning'}}">
+            （库存 {{item.stockQuantity}}{{item.stockUnit || item.unit}}）
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 已有食材 -->
+  <view class="card mt-24">
+    <text class="section-label">✅ 当前已有</text>
+    <view class="flex-wrap mt-24">
+      <text wx:for="{{recipe.availableIngredients}}" wx:key="name" class="tag tag-green">{{item.name}} {{item.amount}}{{item.unit}}</text>
+      <text wx:if="{{recipe.availableIngredients.length === 0}}" class="text-sm text-muted">暂无完全匹配的食材</text>
+    </view>
+  </view>
+
+  <!-- 缺少食材 -->
+  <view class="card mt-24">
+    <text class="section-label">❌ 缺少食材</text>
+    <view class="flex-wrap mt-24">
+      <text wx:for="{{recipe.missingIngredients}}" wx:key="name" class="tag tag-red">
+        {{item.name}} 缺{{item.amount - item.stockQuantity}}{{item.unit}}
+      </text>
+      <text wx:if="{{recipe.missingIngredients.length === 0}}" class="text-sm text-primary">所有食材齐全！</text>
+    </view>
+  </view>
+
+  <!-- 替代建议 -->
+  <view wx:if="{{recipe.substitues.length > 0}}" class="card mt-24">
+    <text class="section-label">💡 替代建议</text>
+    <view wx:for="{{recipe.substitues}}" wx:key="ingredient" class="mt-12">
+      <text class="text-sm">{{item.suggestion}}</text>
+    </view>
+  </view>
+
+  <!-- 视频来源 -->
+  <view class="card mt-24" wx:if="{{video}}">
+    <text class="section-label">🎬 视频来源</text>
+    <view class="video-info mt-24">
+      <view class="flex-between">
+        <view class="flex-row">
+          <text class="tag tag-blue">{{video.platform}}</text>
+          <text class="ml-12">{{video.title}}</text>
+        </view>
+      </view>
+      <view class="flex-between mt-12 text-sm text-muted">
+        <text>作者：{{video.author}}</text>
+        <text>时长：{{video.duration}}</text>
+      </view>
+      <view class="watch-video-btn mt-24" bindtap="onWatchVideo">
+        <text>📺 查看原视频</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 文字教程 -->
+  <view class="card mt-24">
+    <text class="section-label">📝 文字教程</text>
+    <view class="steps-list mt-24">
+      <view wx:for="{{recipe.steps}}" wx:key="*this" class="step-item">
+        <view class="step-dot">{{index + 1}}</view>
+        <text class="step-text">{{item}}</text>
+      </view>
+    </view>
+    <view wx:if="{{recipe.tips}}" class="recipe-tips mt-24">
+      <text class="text-sm text-primary">💡 小贴士：{{recipe.tips}}</text>
+    </view>
+  </view>
+
+  <!-- 上次制作信息 -->
+  <view wx:if="{{lastRecord}}" class="card mt-24">
+    <text class="section-label">📊 上次制作</text>
+    <view class="mt-24">
+      <text class="text-sm">日期：{{lastRecord.cookDate}}</text>
+      <view class="flex-row mt-12">
+        <text class="text-sm text-muted">评分：</text>
+        <rating-display rating="{{lastRecord.rating}}" readonly="{{true}}" />
+      </view>
+      <view class="flex-wrap mt-12">
+        <text wx:for="{{lastRecord.tasteTags}}" wx:key="*this" class="tag tag-orange">{{item}}</text>
+        <text wx:for="{{lastRecord.textureTags}}" wx:key="*this" class="tag tag-gray">{{item}}</text>
+      </view>
+      <view wx:if="{{lastRecord.note}}" class="mt-12">
+        <text class="text-sm text-muted">备注：{{lastRecord.note}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部操作按钮 -->
+  <view class="detail-actions mt-24">
+    <view class="btn-primary detail-btn" bindtap="onStartCooking">
+      <text>👨‍🍳 开始跟做</text>
+    </view>
+    <view class="btn-secondary detail-btn mt-24" bindtap="onFinishRecord">
+      <text>✅ 完成并记录</text>
+    </view>
+  </view>
+</view>
+
+<!-- 加载中 -->
+<view wx:else class="empty-state">
+  <text>加载中...</text>
+</view>

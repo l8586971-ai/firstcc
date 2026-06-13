@@ -1,0 +1,108 @@
+<view class="container">
+  <!-- 顶部标题 -->
+  <view class="header">
+    <text class="header-title">🍳 智能食谱</text>
+    <text class="header-sub">根据你的冰箱，今天吃什么？</text>
+  </view>
+
+  <!-- 今日推荐食谱入口 -->
+  <view class="card today-rec" bindtap="onGenerateRecipe">
+    <view class="flex-between">
+      <view>
+        <text class="today-title">📋 今日推荐食谱</text>
+        <text class="today-desc mt-12">根据冰箱库存，智能推荐适合的菜谱</text>
+      </view>
+      <text class="arrow">→</text>
+    </view>
+    <view class="generate-btn mt-24" bindtap="onGenerateRecipe">
+      <text>🎯 生成今日食谱</text>
+    </view>
+  </view>
+
+  <!-- 提醒卡片 -->
+  <view class="reminder-section mt-24">
+    <!-- 临期提醒 -->
+    <view wx:if="{{expiringFoods.length > 0}}" class="card reminder-card danger">
+      <view class="flex-between">
+        <view class="flex-row">
+          <text class="reminder-icon">⚠️</text>
+          <view>
+            <text class="reminder-title">临期食材提醒</text>
+            <text class="reminder-count text-danger">{{expiringFoods.length}} 件食材即将到期</text>
+          </view>
+        </view>
+        <text class="arrow">→</text>
+      </view>
+      <view class="expiring-list mt-24" wx:if="{{expiringFoods.length > 0}}">
+        <view wx:for="{{expiringFoods}}" wx:key="id" class="expiring-item">
+          <text>• {{item.name}} 到期：{{item.expiryDate}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 低库存提醒 -->
+    <view wx:if="{{lowStockFoods.length > 0}}" class="card reminder-card warning">
+      <view class="flex-between">
+        <view class="flex-row">
+          <text class="reminder-icon">📦</text>
+          <view>
+            <text class="reminder-title">低库存提醒</text>
+            <text class="reminder-count text-warning">{{lowStockFoods.length}} 件食材库存不足</text>
+          </view>
+        </view>
+        <text class="arrow" bindtap="onGoShopping">→</text>
+      </view>
+    </view>
+
+    <!-- 无提醒时 -->
+    <view wx:if="{{expiringFoods.length === 0 && lowStockFoods.length === 0}}" class="card reminder-card all-good">
+      <view class="flex-row">
+        <text class="reminder-icon">✅</text>
+        <text class="reminder-title">库存状态良好，一切正常</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 快捷入口 -->
+  <view class="quick-actions mt-24">
+    <text class="section-title">快捷入口</text>
+    <view class="action-grid mt-24">
+      <view class="action-item" bindtap="onAddFood">
+        <text class="action-icon">🥬</text>
+        <text class="action-text">添加食材</text>
+      </view>
+      <view class="action-item" bindtap="onGenerateRecipe">
+        <text class="action-icon">🍲</text>
+        <text class="action-text">生成食谱</text>
+      </view>
+      <view class="action-item" bindtap="onGoShopping">
+        <text class="action-icon">🛒</text>
+        <text class="action-text">查看采购单</text>
+      </view>
+      <view class="action-item" bindtap="onMyRecipes">
+        <text class="action-icon">⭐</text>
+        <text class="action-text">我的常做菜</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 最近制作 -->
+  <view wx:if="{{recentHistory.length > 0}}" class="recent-section mt-24">
+    <text class="section-title">最近制作</text>
+    <view wx:for="{{recentHistory}}" wx:key="id" class="card recent-item mt-24" bindtap="onRecipeDetail" data-id="{{item.recipeId}}">
+      <view class="flex-between">
+        <view>
+          <text class="recent-name">{{item.recipeName}}</text>
+          <text class="recent-date text-sm text-muted ml-12">{{item.cookDate}}</text>
+        </view>
+        <view class="flex-row">
+          <text class="recent-rating">{{item.stars}}</text>
+          <text class="arrow">→</text>
+        </view>
+      </view>
+      <view wx:if="{{item.nextReminder}}" class="recent-reminder mt-12 text-sm text-warning">
+        <text>💡 {{item.nextReminder}}</text>
+      </view>
+    </view>
+  </view>
+</view>

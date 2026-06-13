@@ -1,0 +1,27 @@
+.rating {
+  display: inline-flex;
+  align-items: center;
+}
+
+.stars {
+  gap: 4rpx;
+}
+
+.star {
+  font-size: 40rpx;
+  color: #ddd;
+  transition: color 0.2s;
+}
+
+.star.active {
+  color: #FFB300;
+}
+
+.star:not(.readonly):active {
+  transform: scale(1.2);
+}
+
+.rating-text {
+  font-size: 24rpx;
+  color: #666;
+}

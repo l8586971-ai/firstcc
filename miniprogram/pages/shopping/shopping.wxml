@@ -1,0 +1,128 @@
+<view class="container">
+  <!-- 顶部 -->
+  <view class="shop-header flex-between">
+    <view>
+      <text class="header-title">🛒 采购单</text>
+      <text class="header-sub text-sm text-muted mt-12">每周六自动更新 · 补货提醒</text>
+    </view>
+    <view class="refresh-btn" bindtap="onRefresh">
+      <text>刷新</text>
+    </view>
+  </view>
+
+  <!-- 统计 -->
+  <view class="stats-bar flex-between mt-24">
+    <view class="stat-item">
+      <text class="stat-num">{{totalItems}}</text>
+      <text class="stat-label">需采购</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-num success">{{purchasedItems}}</text>
+      <text class="stat-label">已购买</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-num warning">{{totalItems - purchasedItems}}</text>
+      <text class="stat-label">待购买</text>
+    </view>
+  </view>
+
+  <!-- 采购列表 -->
+  <view class="shop-list mt-24">
+    <block wx:for="{{shoppingList}}" wx:key="id">
+      <view class="card shop-item {{item.purchased ? 'purchased' : ''}}">
+        <!-- 勾选 + 信息 -->
+        <view class="flex-between">
+          <view class="flex-row">
+            <checkbox
+              checked="{{item.purchased}}"
+              bindtap="onCheckItem"
+              data-id="{{item.id}}"
+              color="#4CAF50"
+            />
+            <view class="ml-12">
+              <view class="flex-row">
+                <text class="shop-name">{{item.name}}</text>
+                <text class="tag tag-green ml-12">{{item.category}}</text>
+                <text wx:if="{{item.priority >= 10}}" class="tag tag-red ml-12">紧急</text>
+              </view>
+              <view class="shop-info mt-12">
+                <text class="text-sm text-muted">
+                  当前库存：{{item.currentStock}}{{item.unit}}
+                  ｜ 预警：{{item.warningThreshold}}{{item.unit}}
+                </text>
+              </view>
+              <view class="shop-reason mt-12">
+                <text class="tag tag-orange">{{item.reason}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <!-- 建议购买量 -->
+        <view class="shop-suggest flex-between mt-24">
+          <view>
+            <text class="text-sm text-muted">建议购买：</text>
+            <text class="suggest-amount">{{item.suggestAmount}} {{item.unit}}</text>
+          </view>
+          <!-- 未购买时显示入库按钮 -->
+          <view wx:if="{{!item.purchased}}" class="stock-in-btn" bindtap="onStockIn" data-id="{{item.id}}">
+            <text>入库</text>
+          </view>
+          <!-- 已购买时显示实际购买量 -->
+          <view wx:else class="purchased-info">
+            <text class="text-sm text-primary">已入库 {{item.actualAmount}}{{item.unit}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <!-- 空状态 -->
+    <view wx:if="{{shoppingList.length === 0}}" class="empty-state">
+      <text class="empty-icon">✅</text>
+      <text>库存充足，无需采购</text>
+    </view>
+  </view>
+
+  <!-- 一键入库按钮 -->
+  <view wx:if="{{unpurchasedItems > 0}}" class="batch-action mt-24">
+    <view class="btn-primary batch-btn" bindtap="onBatchStockIn">
+      <text>一键入库（{{unpurchasedItems}} 件）</text>
+    </view>
+  </view>
+</view>
+
+<!-- 入库弹窗 -->
+<view class="modal" wx:if="{{showStockInModal}}">
+  <view class="modal-mask" bindtap="onCloseModal"></view>
+  <view class="modal-content">
+    <view class="modal-header">
+      <text class="modal-title">入库确认</text>
+      <text class="modal-close" bindtap="onCloseModal">×</text>
+    </view>
+    <view class="modal-body">
+      <view class="modal-info">
+        <text class="modal-name">{{currentItem.name}}</text>
+        <text class="text-sm text-muted mt-12">
+          当前库存：{{currentItem.currentStock}}{{currentItem.unit}}
+        </text>
+      </view>
+      <view class="input-group mt-24">
+        <text class="input-label">实际购买数量（{{currentItem.unit}}）</text>
+        <input
+          class="input-field"
+          type="digit"
+          value="{{stockInAmount}}"
+          bindinput="onAmountInput"
+          placeholder="输入购买数量"
+        />
+      </view>
+      <view class="modal-suggest mt-12">
+        <text class="text-sm text-muted">建议购买：{{currentItem.suggestAmount}}{{currentItem.unit}}</text>
+      </view>
+    </view>
+    <view class="modal-footer flex-between mt-24">
+      <view class="btn-secondary modal-btn" bindtap="onCloseModal">取消</view>
+      <view class="btn-primary modal-btn" bindtap="onConfirmStockIn">确认入库</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "step-indicator": "/components/step-indicator/step-indicator"
+  },
+  "navigationBarTitleText": "跟做模式"
+}

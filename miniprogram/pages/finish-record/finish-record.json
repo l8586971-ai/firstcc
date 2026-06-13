@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "rating-display": "/components/rating/rating"
+  },
+  "navigationBarTitleText": "完成记录"
+}

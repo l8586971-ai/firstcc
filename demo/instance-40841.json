@@ -1,0 +1,1074 @@
+﻿{
+    "name":  "HTML尝试",
+    "lastModified":  "2026-06-13T01:54:58Z",
+    "thumbnailUrl":  "https://s3-alpha.figma.com/thumbnails/ef87a758-332d-404d-b761-b6bed318678d?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAQ4GOSFWC3OWBHO3A%2F20260611%2Fus-west-2%2Fs3%2Faws4_request\u0026X-Amz-Date=20260611T000000Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=743934c248035aec883f8e76dc025e2581dc230096a0714159a2820db185ff19",
+    "version":  "2364341761949006247",
+    "role":  "owner",
+    "editorType":  "figma",
+    "linkAccess":  "view",
+    "nodes":  {
+                  "1:40841":  {
+                                  "document":  {
+                                                   "id":  "1:40841",
+                                                   "name":  "风险辨识评估页面模板",
+                                                   "type":  "INSTANCE",
+                                                   "scrollBehavior":  "SCROLLS",
+                                                   "componentId":  "1:2196",
+                                                   "overrides":  [
+                                                                     {
+                                                                         "id":  "I1:40841;1215:82980",
+                                                                         "overriddenFields":  [
+                                                                                                  "componentProperties",
+                                                                                                  "transitionDuration",
+                                                                                                  "transitionEasing",
+                                                                                                  "transitionNodeID"
+                                                                                              ]
+                                                                     },
+                                                                     {
+                                                                         "id":  "I1:40841;1215:82982;1171:82721",
+                                                                         "overriddenFields":  [
+                                                                                                  "characterStyleOverrides",
+                                                                                                  "characters",
+                                                                                                  "lineIndentations",
+                                                                                                  "lineTypes",
+                                                                                                  "styleOverrideTable"
+                                                                                              ]
+                                                                     },
+                                                                     {
+                                                                         "id":  "I1:40841;1215:82982;1171:82724",
+                                                                         "overriddenFields":  [
+                                                                                                  "characterStyleOverrides",
+                                                                                                  "characters",
+                                                                                                  "lineIndentations",
+                                                                                                  "lineTypes",
+                                                                                                  "styleOverrideTable"
+                                                                                              ]
+                                                                     },
+                                                                     {
+                                                                         "id":  "I1:40841;1215:82982;1171:82730",
+                                                                         "overriddenFields":  [
+                                                                                                  "transitionDuration",
+                                                                                                  "transitionEasing",
+                                                                                                  "transitionNodeID"
+                                                                                              ]
+                                                                     },
+                                                                     {
+                                                                         "id":  "I1:40841;1215:82982;1171:82731",
+                                                                         "overriddenFields":  [
+                                                                                                  "characterStyleOverrides",
+                                                                                                  "characters",
+                                                                                                  "lineIndentations",
+                                                                                                  "lineTypes",
+                                                                                                  "styleOverrideTable"
+                                                                                              ]
+                                                                     },
+                                                                     {
+                                                                         "id":  "I1:40841;1215:82982;1348:65577",
+                                                                         "overriddenFields":  [
+                                                                                                  "visible"
+                                                                                              ]
+                                                                     },
+                                                                     {
+                                                                         "id":  "I1:40841;1215:82982;1348:65582",
+                                                                         "overriddenFields":  [
+                                                                                                  "visible"
+                                                                                              ]
+                                                                     },
+                                                                     {
+                                                                         "id":  "I1:40841;1215:82982;1348:65587",
+                                                                         "overriddenFields":  [
+                                                                                                  "visible"
+                                                                                              ]
+                                                                     },
+                                                                     {
+                                                                         "id":  "I1:40841;1215:82982;1348:65592",
+                                                                         "overriddenFields":  [
+                                                                                                  "visible"
+                                                                                              ]
+                                                                     },
+                                                                     {
+                                                                         "id":  "I1:40841;1215:82982;1348:65597",
+                                                                         "overriddenFields":  [
+                                                                                                  "visible"
+                                                                                              ]
+                                                                     },
+                                                                     {
+                                                                         "id":  "I1:40841;971:90957;807:18454;35336:297793;50326:583612",
+                                                                         "overriddenFields":  [
+                                                                                                  "characterStyleOverrides",
+                                                                                                  "characters",
+                                                                                                  "lineIndentations",
+                                                                                                  "lineTypes",
+                                                                                                  "styleOverrideTable"
+                                                                                              ]
+                                                                     },
+                                                                     {
+                                                                         "id":  "I1:40841;971:90957;807:18454;35336:297794;50326:587383",
+                                                                         "overriddenFields":  [
+                                                                                                  "characterStyleOverrides",
+                                                                                                  "characters",
+                                                                                                  "lineIndentations",
+                                                                                                  "lineTypes",
+                                                                                                  "styleOverrideTable"
+                                                                                              ]
+                                                                     }
+                                                                 ],
+                                                   "children":  [
+                                                                    {
+                                                                        "id":  "I1:40841;971:90946",
+                                                                        "name":  "背景 (1) 1",
+                                                                        "type":  "RECTANGLE",
+                                                                        "scrollBehavior":  "SCROLLS",
+                                                                        "blendMode":  "PASS_THROUGH",
+                                                                        "fills":  [
+                                                                                      "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=0d84631331f8a9fce3efcfe30566bc374baf5f4a}"
+                                                                                  ],
+                                                                        "strokes":  [
+
+                                                                                    ],
+                                                                        "strokeWeight":  1.0,
+                                                                        "strokeAlign":  "INSIDE",
+                                                                        "absoluteBoundingBox":  {
+                                                                                                    "x":  0.0,
+                                                                                                    "y":  31.0,
+                                                                                                    "width":  1920.0,
+                                                                                                    "height":  1080.0
+                                                                                                },
+                                                                        "absoluteRenderBounds":  {
+                                                                                                     "x":  0.0,
+                                                                                                     "y":  31.0,
+                                                                                                     "width":  1920.0,
+                                                                                                     "height":  1080.0
+                                                                                                 },
+                                                                        "preserveRatio":  true,
+                                                                        "targetAspectRatio":  {
+                                                                                                  "x":  1920.0,
+                                                                                                  "y":  1080.0
+                                                                                              },
+                                                                        "constraints":  {
+                                                                                            "vertical":  "TOP",
+                                                                                            "horizontal":  "LEFT"
+                                                                                        },
+                                                                        "effects":  [
+
+                                                                                    ],
+                                                                        "interactions":  [
+
+                                                                                         ],
+                                                                        "complexStrokeProperties":  {
+                                                                                                        "strokeType":  "BASIC"
+                                                                                                    }
+                                                                    },
+                                                                    {
+                                                                        "id":  "I1:40841;971:90947",
+                                                                        "name":  "Frame 757",
+                                                                        "type":  "FRAME",
+                                                                        "scrollBehavior":  "SCROLLS",
+                                                                        "children":  [
+                                                                                         "@{id=I1:40841;971:90948; name=微信图片_20250715175136_10_854 1; type=RECTANGLE; scrollBehavior=SCROLLS; blendMode=PASS_THROUGH; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=INSIDE; absoluteBoundingBox=; absoluteRenderBounds=; targetAspectRatio=; constraints=; layoutAlign=INHERIT; layoutGrow=0.0; layoutSizingHorizontal=FIXED; layoutSizingVertical=FIXED; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;971:90949; name=双重预防管控平台; type=TEXT; scrollBehavior=SCROLLS; blendMode=PASS_THROUGH; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=OUTSIDE; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=INHERIT; layoutGrow=0.0; layoutSizingHorizontal=HUG; layoutSizingVertical=HUG; characters=双重预防管控平台; characterStyleOverrides=System.Object[]; styleOverrideTable=; lineTypes=System.Object[]; lineIndentations=System.Object[]; style=; layoutVersion=5; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}"
+                                                                                     ],
+                                                                        "blendMode":  "PASS_THROUGH",
+                                                                        "clipsContent":  false,
+                                                                        "background":  [
+
+                                                                                       ],
+                                                                        "fills":  [
+
+                                                                                  ],
+                                                                        "strokes":  [
+
+                                                                                    ],
+                                                                        "strokeWeight":  1.0,
+                                                                        "strokeAlign":  "INSIDE",
+                                                                        "backgroundColor":  {
+                                                                                                "r":  0.0,
+                                                                                                "g":  0.0,
+                                                                                                "b":  0.0,
+                                                                                                "a":  0.0
+                                                                                            },
+                                                                        "layoutMode":  "HORIZONTAL",
+                                                                        "counterAxisAlignItems":  "CENTER",
+                                                                        "layoutWrap":  "NO_WRAP",
+                                                                        "absoluteBoundingBox":  {
+                                                                                                    "x":  15.0,
+                                                                                                    "y":  52.0,
+                                                                                                    "width":  211.0,
+                                                                                                    "height":  31.0
+                                                                                                },
+                                                                        "absoluteRenderBounds":  {
+                                                                                                     "x":  15.0,
+                                                                                                     "y":  52.0,
+                                                                                                     "width":  211.0,
+                                                                                                     "height":  31.0
+                                                                                                 },
+                                                                        "constraints":  {
+                                                                                            "vertical":  "TOP",
+                                                                                            "horizontal":  "LEFT"
+                                                                                        },
+                                                                        "layoutSizingHorizontal":  "HUG",
+                                                                        "layoutSizingVertical":  "HUG",
+                                                                        "effects":  [
+
+                                                                                    ],
+                                                                        "interactions":  [
+
+                                                                                         ],
+                                                                        "complexStrokeProperties":  {
+                                                                                                        "strokeType":  "BASIC"
+                                                                                                    }
+                                                                    },
+                                                                    {
+                                                                        "id":  "I1:40841;971:90950",
+                                                                        "name":  "顶部导航栏",
+                                                                        "type":  "INSTANCE",
+                                                                        "scrollBehavior":  "SCROLLS",
+                                                                        "componentId":  "1:200",
+                                                                        "overrides":  [
+
+                                                                                      ],
+                                                                        "children":  [
+                                                                                         "@{id=I1:40841;971:90950;446:8021; name=顶部导航item; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:177; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; layoutMode=HORIZONTAL; counterAxisAlignItems=CENTER; paddingLeft=12.0; paddingRight=12.0; paddingTop=6.0; paddingBottom=6.0; itemSpacing=8.0; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=INHERIT; layoutGrow=0.0; layoutSizingHorizontal=HUG; layoutSizingVertical=HUG; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;971:90950;446:8044; name=顶部导航item; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:186; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; individualStrokeWeights=; strokeAlign=INSIDE; backgroundColor=; layoutMode=HORIZONTAL; counterAxisAlignItems=CENTER; primaryAxisAlignItems=CENTER; paddingLeft=12.0; paddingRight=12.0; paddingTop=6.0; paddingBottom=6.0; itemSpacing=6.0; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=INHERIT; layoutGrow=0.0; layoutSizingHorizontal=HUG; layoutSizingVertical=HUG; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;971:90950;446:8067; name=顶部导航item; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:177; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; layoutMode=HORIZONTAL; counterAxisAlignItems=CENTER; paddingLeft=12.0; paddingRight=12.0; paddingTop=6.0; paddingBottom=6.0; itemSpacing=8.0; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=INHERIT; layoutGrow=0.0; layoutSizingHorizontal=HUG; layoutSizingVertical=HUG; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;971:90950;446:8090; name=顶部导航item; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:177; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; layoutMode=HORIZONTAL; counterAxisAlignItems=CENTER; paddingLeft=12.0; paddingRight=12.0; paddingTop=6.0; paddingBottom=6.0; itemSpacing=8.0; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=INHERIT; layoutGrow=0.0; layoutSizingHorizontal=HUG; layoutSizingVertical=HUG; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;971:90950;446:8113; name=顶部导航item; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:177; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; layoutMode=HORIZONTAL; counterAxisAlignItems=CENTER; paddingLeft=12.0; paddingRight=12.0; paddingTop=6.0; paddingBottom=6.0; itemSpacing=8.0; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=INHERIT; layoutGrow=0.0; layoutSizingHorizontal=HUG; layoutSizingVertical=HUG; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;971:90950;446:8136; name=顶部导航item; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:177; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; layoutMode=HORIZONTAL; counterAxisAlignItems=CENTER; paddingLeft=12.0; paddingRight=12.0; paddingTop=6.0; paddingBottom=6.0; itemSpacing=8.0; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=INHERIT; layoutGrow=0.0; layoutSizingHorizontal=HUG; layoutSizingVertical=HUG; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;971:90950;446:8159; name=顶部导航item; visible=False; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:177; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; layoutMode=HORIZONTAL; counterAxisAlignItems=CENTER; paddingLeft=12.0; paddingRight=12.0; paddingTop=6.0; paddingBottom=6.0; itemSpacing=8.0; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=INHERIT; layoutGrow=0.0; layoutSizingHorizontal=HUG; layoutSizingVertical=HUG; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;971:90950;446:8182; name=顶部导航item; visible=False; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:177; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; layoutMode=HORIZONTAL; counterAxisAlignItems=CENTER; paddingLeft=12.0; paddingRight=12.0; paddingTop=6.0; paddingBottom=6.0; itemSpacing=8.0; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=INHERIT; layoutGrow=0.0; layoutSizingHorizontal=HUG; layoutSizingVertical=HUG; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}"
+                                                                                     ],
+                                                                        "blendMode":  "PASS_THROUGH",
+                                                                        "clipsContent":  false,
+                                                                        "background":  [
+
+                                                                                       ],
+                                                                        "fills":  [
+
+                                                                                  ],
+                                                                        "strokes":  [
+
+                                                                                    ],
+                                                                        "strokeWeight":  1.0,
+                                                                        "strokeAlign":  "INSIDE",
+                                                                        "backgroundColor":  {
+                                                                                                "r":  0.0,
+                                                                                                "g":  0.0,
+                                                                                                "b":  0.0,
+                                                                                                "a":  0.0
+                                                                                            },
+                                                                        "layoutMode":  "HORIZONTAL",
+                                                                        "counterAxisSizingMode":  "FIXED",
+                                                                        "primaryAxisAlignItems":  "CENTER",
+                                                                        "itemSpacing":  8.0,
+                                                                        "layoutWrap":  "NO_WRAP",
+                                                                        "absoluteBoundingBox":  {
+                                                                                                    "x":  280.0,
+                                                                                                    "y":  50.0,
+                                                                                                    "width":  838.0,
+                                                                                                    "height":  34.0
+                                                                                                },
+                                                                        "absoluteRenderBounds":  {
+                                                                                                     "x":  280.0,
+                                                                                                     "y":  50.0,
+                                                                                                     "width":  838.0,
+                                                                                                     "height":  42.0
+                                                                                                 },
+                                                                        "constraints":  {
+                                                                                            "vertical":  "CENTER",
+                                                                                            "horizontal":  "CENTER"
+                                                                                        },
+                                                                        "layoutSizingHorizontal":  "HUG",
+                                                                        "layoutSizingVertical":  "FIXED",
+                                                                        "effects":  [
+
+                                                                                    ],
+                                                                        "interactions":  [
+
+                                                                                         ],
+                                                                        "complexStrokeProperties":  {
+                                                                                                        "strokeType":  "BASIC"
+                                                                                                    }
+                                                                    },
+                                                                    {
+                                                                        "id":  "I1:40841;971:90951",
+                                                                        "name":  "Group 1",
+                                                                        "type":  "GROUP",
+                                                                        "scrollBehavior":  "SCROLLS",
+                                                                        "children":  [
+                                                                                         "@{id=I1:40841;971:90952; name=user; type=FRAME; scrollBehavior=SCROLLS; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=True; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; cornerRadius=3.0; cornerSmoothing=0.0; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;971:90954; name=admin; type=TEXT; scrollBehavior=SCROLLS; blendMode=PASS_THROUGH; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=OUTSIDE; styles=; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; characters=admin; characterStyleOverrides=System.Object[]; styleOverrideTable=; lineTypes=System.Object[]; lineIndentations=System.Object[]; style=; layoutVersion=4; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;971:90955; name=icon; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:214; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}"
+                                                                                     ],
+                                                                        "blendMode":  "PASS_THROUGH",
+                                                                        "clipsContent":  false,
+                                                                        "background":  [
+
+                                                                                       ],
+                                                                        "fills":  [
+
+                                                                                  ],
+                                                                        "strokes":  [
+
+                                                                                    ],
+                                                                        "rectangleCornerRadii":  [
+                                                                                                     0.0,
+                                                                                                     0.0,
+                                                                                                     0.0,
+                                                                                                     0.0
+                                                                                                 ],
+                                                                        "cornerSmoothing":  0.0,
+                                                                        "strokeWeight":  1.0,
+                                                                        "strokeAlign":  "INSIDE",
+                                                                        "backgroundColor":  {
+                                                                                                "r":  0.0,
+                                                                                                "g":  0.0,
+                                                                                                "b":  0.0,
+                                                                                                "a":  0.0
+                                                                                            },
+                                                                        "absoluteBoundingBox":  {
+                                                                                                    "x":  1781.0,
+                                                                                                    "y":  51.0,
+                                                                                                    "width":  99.0,
+                                                                                                    "height":  32.0
+                                                                                                },
+                                                                        "absoluteRenderBounds":  {
+                                                                                                     "x":  1781.0,
+                                                                                                     "y":  51.0,
+                                                                                                     "width":  99.0,
+                                                                                                     "height":  32.0
+                                                                                                 },
+                                                                        "constraints":  {
+                                                                                            "vertical":  "TOP",
+                                                                                            "horizontal":  "LEFT"
+                                                                                        },
+                                                                        "effects":  [
+
+                                                                                    ],
+                                                                        "interactions":  [
+
+                                                                                         ],
+                                                                        "complexStrokeProperties":  {
+                                                                                                        "strokeType":  "BASIC"
+                                                                                                    }
+                                                                    },
+                                                                    {
+                                                                        "id":  "I1:40841;971:90957",
+                                                                        "name":  "增减选项卡-卡片",
+                                                                        "type":  "INSTANCE",
+                                                                        "scrollBehavior":  "SCROLLS",
+                                                                        "componentId":  "1:2006",
+                                                                        "overrides":  [
+                                                                                          "@{id=I1:40841;971:90957;807:18454;35336:297793;50326:583612; overriddenFields=System.Object[]}",
+                                                                                          "@{id=I1:40841;971:90957;807:18454;35336:297794;50326:587383; overriddenFields=System.Object[]}"
+                                                                                      ],
+                                                                        "children":  [
+                                                                                         "@{id=I1:40841;971:90957;807:18454; name=cardTabs 选项卡-卡片主题; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:1079; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=True; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; individualStrokeWeights=; strokeAlign=INSIDE; backgroundColor=; styles=; layoutMode=HORIZONTAL; primaryAxisSizingMode=FIXED; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=STRETCH; layoutGrow=0.0; layoutSizingHorizontal=FILL; layoutSizingVertical=HUG; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}"
+                                                                                     ],
+                                                                        "blendMode":  "PASS_THROUGH",
+                                                                        "clipsContent":  false,
+                                                                        "background":  [
+
+                                                                                       ],
+                                                                        "fills":  [
+
+                                                                                  ],
+                                                                        "strokes":  [
+
+                                                                                    ],
+                                                                        "strokeWeight":  1.0,
+                                                                        "strokeAlign":  "INSIDE",
+                                                                        "backgroundColor":  {
+                                                                                                "r":  0.0,
+                                                                                                "g":  0.0,
+                                                                                                "b":  0.0,
+                                                                                                "a":  0.0
+                                                                                            },
+                                                                        "layoutMode":  "VERTICAL",
+                                                                        "counterAxisSizingMode":  "FIXED",
+                                                                        "layoutWrap":  "NO_WRAP",
+                                                                        "absoluteBoundingBox":  {
+                                                                                                    "x":  240.0,
+                                                                                                    "y":  103.0,
+                                                                                                    "width":  1680.0,
+                                                                                                    "height":  48.0
+                                                                                                },
+                                                                        "absoluteRenderBounds":  {
+                                                                                                     "x":  240.0,
+                                                                                                     "y":  103.0,
+                                                                                                     "width":  1680.0,
+                                                                                                     "height":  48.0
+                                                                                                 },
+                                                                        "constraints":  {
+                                                                                            "vertical":  "TOP",
+                                                                                            "horizontal":  "LEFT"
+                                                                                        },
+                                                                        "layoutSizingHorizontal":  "FIXED",
+                                                                        "layoutSizingVertical":  "HUG",
+                                                                        "effects":  [
+
+                                                                                    ],
+                                                                        "interactions":  [
+
+                                                                                         ],
+                                                                        "complexStrokeProperties":  {
+                                                                                                        "strokeType":  "BASIC"
+                                                                                                    }
+                                                                    },
+                                                                    {
+                                                                        "id":  "I1:40841;971:90958",
+                                                                        "name":  "Frame 762",
+                                                                        "type":  "FRAME",
+                                                                        "scrollBehavior":  "SCROLLS",
+                                                                        "children":  [
+                                                                                         "@{id=I1:40841;1215:82974; name=Component 6; type=FRAME; scrollBehavior=SCROLLS; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; layoutMode=VERTICAL; counterAxisSizingMode=FIXED; counterAxisAlignItems=CENTER; paddingBottom=6.0; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=STRETCH; layoutGrow=0.0; layoutSizingHorizontal=FILL; layoutSizingVertical=HUG; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;978:91219; name=Component 12; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:2077; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; cornerRadius=4.0; cornerSmoothing=0.0; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; layoutMode=VERTICAL; counterAxisSizingMode=FIXED; primaryAxisSizingMode=FIXED; primaryAxisAlignItems=CENTER; paddingLeft=26.0; paddingRight=26.0; paddingTop=6.0; paddingBottom=6.0; itemSpacing=10.0; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=STRETCH; layoutGrow=0.0; layoutSizingHorizontal=FILL; layoutSizingVertical=FIXED; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;978:91326; name=Component 13; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:2077; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; cornerRadius=4.0; cornerSmoothing=0.0; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; layoutMode=VERTICAL; counterAxisSizingMode=FIXED; primaryAxisSizingMode=FIXED; primaryAxisAlignItems=CENTER; paddingLeft=26.0; paddingRight=26.0; paddingTop=6.0; paddingBottom=6.0; itemSpacing=10.0; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=STRETCH; layoutGrow=0.0; layoutSizingHorizontal=FILL; layoutSizingVertical=FIXED; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;986:91336; name=Component 14; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:2077; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; cornerRadius=4.0; cornerSmoothing=0.0; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; layoutMode=VERTICAL; counterAxisSizingMode=FIXED; primaryAxisSizingMode=FIXED; primaryAxisAlignItems=CENTER; paddingLeft=26.0; paddingRight=26.0; paddingTop=6.0; paddingBottom=6.0; itemSpacing=10.0; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=STRETCH; layoutGrow=0.0; layoutSizingHorizontal=FILL; layoutSizingVertical=FIXED; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;1657:72953; name=Component 15; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:2077; componentProperties=; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=False; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; cornerRadius=4.0; cornerSmoothing=0.0; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; layoutMode=VERTICAL; counterAxisSizingMode=FIXED; primaryAxisSizingMode=FIXED; primaryAxisAlignItems=CENTER; paddingLeft=26.0; paddingRight=26.0; paddingTop=6.0; paddingBottom=6.0; itemSpacing=10.0; layoutWrap=NO_WRAP; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=STRETCH; layoutGrow=0.0; layoutSizingHorizontal=FILL; layoutSizingVertical=FIXED; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}"
+                                                                                     ],
+                                                                        "blendMode":  "PASS_THROUGH",
+                                                                        "clipsContent":  false,
+                                                                        "background":  [
+
+                                                                                       ],
+                                                                        "fills":  [
+
+                                                                                  ],
+                                                                        "strokes":  [
+
+                                                                                    ],
+                                                                        "strokeWeight":  1.0,
+                                                                        "strokeAlign":  "INSIDE",
+                                                                        "backgroundColor":  {
+                                                                                                "r":  0.0,
+                                                                                                "g":  0.0,
+                                                                                                "b":  0.0,
+                                                                                                "a":  0.0
+                                                                                            },
+                                                                        "layoutMode":  "VERTICAL",
+                                                                        "counterAxisSizingMode":  "FIXED",
+                                                                        "layoutWrap":  "NO_WRAP",
+                                                                        "absoluteBoundingBox":  {
+                                                                                                    "x":  14.0,
+                                                                                                    "y":  103.0,
+                                                                                                    "width":  212.0,
+                                                                                                    "height":  402.0
+                                                                                                },
+                                                                        "absoluteRenderBounds":  {
+                                                                                                     "x":  14.0,
+                                                                                                     "y":  103.0,
+                                                                                                     "width":  212.0,
+                                                                                                     "height":  402.0
+                                                                                                 },
+                                                                        "constraints":  {
+                                                                                            "vertical":  "TOP",
+                                                                                            "horizontal":  "LEFT"
+                                                                                        },
+                                                                        "layoutSizingHorizontal":  "FIXED",
+                                                                        "layoutSizingVertical":  "HUG",
+                                                                        "effects":  [
+
+                                                                                    ],
+                                                                        "interactions":  [
+
+                                                                                         ],
+                                                                        "complexStrokeProperties":  {
+                                                                                                        "strokeType":  "BASIC"
+                                                                                                    }
+                                                                    },
+                                                                    {
+                                                                        "id":  "I1:40841;971:90966",
+                                                                        "name":  "选择煤矿",
+                                                                        "type":  "INSTANCE",
+                                                                        "scrollBehavior":  "SCROLLS",
+                                                                        "componentId":  "1:2188",
+                                                                        "componentProperties":  {
+                                                                                                    "Property 1":  "@{value=Default; type=VARIANT; boundVariables=}"
+                                                                                                },
+                                                                        "overrides":  [
+
+                                                                                      ],
+                                                                        "children":  [
+                                                                                         "@{id=I1:40841;971:90966;839:76033; name=placeholder; type=TEXT; scrollBehavior=SCROLLS; blendMode=PASS_THROUGH; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=OUTSIDE; styles=; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=INHERIT; layoutGrow=1.0; layoutSizingHorizontal=FILL; layoutSizingVertical=FIXED; characters=焦家寨煤矿; characterStyleOverrides=System.Object[]; styleOverrideTable=; lineTypes=System.Object[]; lineIndentations=System.Object[]; style=; layoutVersion=5; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}",
+                                                                                         "@{id=I1:40841;971:90966;839:76034; name=chevron-down; type=INSTANCE; scrollBehavior=SCROLLS; componentId=1:531; overrides=System.Object[]; children=System.Object[]; blendMode=PASS_THROUGH; clipsContent=True; background=System.Object[]; fills=System.Object[]; strokes=System.Object[]; strokeWeight=1.0; strokeAlign=INSIDE; backgroundColor=; absoluteBoundingBox=; absoluteRenderBounds=; constraints=; layoutAlign=INHERIT; layoutGrow=0.0; layoutSizingHorizontal=FIXED; layoutSizingVertical=FIXED; effects=System.Object[]; interactions=System.Object[]; complexStrokeProperties=}"
+                                                                                     ],
+                                                                        "blendMode":  "PASS_THROUGH",
+                                                                        "clipsContent":  false,
+                                                                        "background":  [
+                                                                                           "@{blendMode=NORMAL; type=SOLID; color=}"
+                                                                                       ],
+                                                                        "fills":  [
+                                                                                      "@{blendMode=NORMAL; type=SOLID; color=}"
+                                                                                  ],
+                                                                        "strokes":  [
+                                                                                        "@{blendMode=NORMAL; type=SOLID; color=}"
+                                                                                    ],
+                                                                        "cornerRadius":  3.0,
+                                                                        "cornerSmoothing":  0.0,
+                                                                        "strokeWeight":  1.0,
+                                                                        "strokeAlign":  "INSIDE",
+                                                                        "backgroundColor":  {
+                                                                                                "r":  0.11857433617115021,
+                                                                                                "g":  0.27262338995933533,
+                                                                                                "b":  0.45673078298568726,
+                                                                                                "a":  1.0
+                                                                                            },
+                                                                        "layoutMode":  "HORIZONTAL",
+                                                                        "primaryAxisSizingMode":  "FIXED",
+                                                                        "counterAxisAlignItems":  "CENTER",
+                                                                        "paddingLeft":  8.0,
+                                                                        "paddingRight":  8.0,
+                                                                        "paddingTop":  5.0,
+                                                                        "paddingBottom":  5.0,
+                                                                        "itemSpacing":  8.0,
+                                                                        "layoutWrap":  "NO_WRAP",
+                                                                        "absoluteBoundingBox":  {
+                                                                                                    "x":  1608.0,
+                                                                                                    "y":  51.0,
+                                                                                                    "width":  160.0,
+                                                                                                    "height":  32.0
+                                                                                                },
+                                                                        "absoluteRenderBounds":  {
+                                                                                                     "x":  1608.0,
+                                                                                                     "y":  51.0,
+                                                                                                     "width":  160.0,
+                                                                                                     "height":  32.0
+                                                                                                 },
+                                                                        "constraints":  {
+                                                                                            "vertical":  "TOP",
+                                                                                            "horizontal":  "LEFT"
+                                                                                        },
+                                                                        "layoutSizingHorizontal":  "FIXED",
+                                                                        "layoutSizingVertical":  "HUG",
+                                                                        "effects":  [
+
+                                                                                    ],
+                                                                        "transitionNodeID":  "1:2191",
+                                                                        "transitionDuration":  300.0,
+                                                                        "transitionEasing":  "EASE_OUT",
+                                                                        "interactions":  [
+                                                                                             "@{trigger=; actions=System.Object[]}"
+                                                                                         ],
+                                                                        "complexStrokeProperties":  {
+                                                                                                        "strokeType":  "BASIC"
+                                                                                                    }
+                                                                    }
+                                                                ],
+                                                   "blendMode":  "PASS_THROUGH",
+                                                   "clipsContent":  false,
+                                                   "background":  [
+                                                                      {
+                                                                          "blendMode":  "NORMAL",
+                                                                          "type":  "SOLID",
+                                                                          "color":  {
+                                                                                        "r":  0.95294117927551270,
+                                                                                        "g":  0.95294117927551270,
+                                                                                        "b":  0.95294117927551270,
+                                                                                        "a":  1.0
+                                                                                    }
+                                                                      }
+                                                                  ],
+                                                   "fills":  [
+                                                                 {
+                                                                     "blendMode":  "NORMAL",
+                                                                     "type":  "SOLID",
+                                                                     "color":  {
+                                                                                   "r":  0.95294117927551270,
+                                                                                   "g":  0.95294117927551270,
+                                                                                   "b":  0.95294117927551270,
+                                                                                   "a":  1.0
+                                                                               }
+                                                                 }
+                                                             ],
+                                                   "strokes":  [
+
+                                                               ],
+                                                   "strokeWeight":  1.0,
+                                                   "strokeAlign":  "INSIDE",
+                                                   "backgroundColor":  {
+                                                                           "r":  0.95294117927551270,
+                                                                           "g":  0.95294117927551270,
+                                                                           "b":  0.95294117927551270,
+                                                                           "a":  1.0
+                                                                       },
+                                                   "styles":  {
+                                                                  "fills":  "1:143",
+                                                                  "fill":  "1:143"
+                                                              },
+                                                   "absoluteBoundingBox":  {
+                                                                               "x":  0.0,
+                                                                               "y":  31.0,
+                                                                               "width":  1920.0,
+                                                                               "height":  1080.0
+                                                                           },
+                                                   "absoluteRenderBounds":  {
+                                                                                "x":  0.0,
+                                                                                "y":  31.0,
+                                                                                "width":  1920.0,
+                                                                                "height":  1080.0
+                                                                            },
+                                                   "constraints":  {
+                                                                       "vertical":  "TOP",
+                                                                       "horizontal":  "LEFT"
+                                                                   },
+                                                   "effects":  [
+
+                                                               ],
+                                                   "interactions":  [
+
+                                                                    ],
+                                                   "complexStrokeProperties":  {
+                                                                                   "strokeType":  "BASIC"
+                                                                               }
+                                               },
+                                  "components":  {
+                                                     "1:2196":  {
+                                                                    "key":  "0f1eda080809665a721e78ad2db13011d8aff9f5",
+                                                                    "name":  "风险辨识评估页面模板",
+                                                                    "description":  "",
+                                                                    "remote":  true,
+                                                                    "documentationLinks":  [
+
+                                                                                           ]
+                                                                },
+                                                     "1:200":  {
+                                                                   "key":  "12832ff5b5298d75d21d663646e812257d983115",
+                                                                   "name":  "顶部导航栏",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:177":  {
+                                                                   "key":  "54b3b7843029c88f656a7ecbbeadbbb6eb1de046",
+                                                                   "name":  "状态=default",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "componentSetId":  "1:176",
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:198":  {
+                                                                   "key":  "ce8f5495e3457dcd446af53388a414861c8668b3",
+                                                                   "name":  "首页",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:186":  {
+                                                                   "key":  "855a499fbbdc14e00395b901620ed980e5c540d1",
+                                                                   "name":  "状态=select",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "componentSetId":  "1:176",
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:150":  {
+                                                                   "key":  "8f0994b87691d20b2359005784da30b5c7331dbf",
+                                                                   "name":  "line-风险",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:192":  {
+                                                                   "key":  "3192230633f1225122d5cf753bca155abf1e10d7",
+                                                                   "name":  "line-隐患",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:148":  {
+                                                                   "key":  "15362ee629a4f8f0ec174ebe26636b9c402dc0aa",
+                                                                   "name":  "line-分析",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:144":  {
+                                                                   "key":  "fd0af52f0b02f1e9a09e4e8e2b88fa4f126f4683",
+                                                                   "name":  "监控",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:158":  {
+                                                                   "key":  "21282fc806928a7bdecd7e9ac783840a5369ace5",
+                                                                   "name":  "state=normal",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "componentSetId":  "1:157",
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:234":  {
+                                                                   "key":  "17216b257b8957fafe98c6b40d1c419b1caacaa4",
+                                                                   "name":  "名称=user",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "componentSetId":  "1:211",
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:214":  {
+                                                                   "key":  "91416e61ef03d17a9d9e804ff919b8dfa45760c6",
+                                                                   "name":  "名称=chevron-down",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "componentSetId":  "1:211",
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:2006":  {
+                                                                    "key":  "d830d0d0767505a07a82a3d86266c95a412603ed",
+                                                                    "name":  "增减选项卡-卡片",
+                                                                    "description":  "",
+                                                                    "remote":  true,
+                                                                    "documentationLinks":  [
+
+                                                                                           ]
+                                                                },
+                                                     "1:1079":  {
+                                                                    "key":  "0e3c4e201eb39f8cc8d86d3d3be8a99011e36fbc",
+                                                                    "name":  "placement 位置=top 顶部, size 尺寸=medium 中尺寸, items 数量=3, icon 图标=false, add 添加选项卡=true, ⬑removable 删除=true, chevron 滑动=true",
+                                                                    "description":  "",
+                                                                    "remote":  true,
+                                                                    "componentSetId":  "1:677",
+                                                                    "documentationLinks":  [
+
+                                                                                           ]
+                                                                },
+                                                     "1:276":  {
+                                                                   "key":  "c6a190aeb88f31056044f5f68d7c6346cfc59420",
+                                                                   "name":  "icon 图标=false, state 状态=normal 默认, disabled 禁用=false, remove 移除=true",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "componentSetId":  "1:250",
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:248":  {
+                                                                   "key":  "3cb3ab5e064d3422b7dafd9b766ee18d3b60402e",
+                                                                   "name":  "close",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:285":  {
+                                                                   "key":  "4520b95c017458b20a5bd4251ceb8ecad6b77250",
+                                                                   "name":  "icon 图标=false, state 状态=select 选择, disabled 禁用=false, remove 移除=true",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "componentSetId":  "1:250",
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:321":  {
+                                                                   "key":  "9c7458921dc8534cc53a1cdfcbe9db3ac0f922a2",
+                                                                   "name":  "chevron 滑动=false, state 状态=normal 默认, text 文字=false, disabled 禁用=false",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "componentSetId":  "1:320",
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:316":  {
+                                                                   "key":  "bf2ce46984a98d7296d3f8df0414f6d0f6e4c8f5",
+                                                                   "name":  "add",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:333":  {
+                                                                   "key":  "efd12ec653cc127bd54b57d40c1a01d7cd2cc333",
+                                                                   "name":  "chevron 滑动=true, state 状态=normal 默认, text 文字=false, disabled 禁用=false",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "componentSetId":  "1:320",
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:318":  {
+                                                                   "key":  "8fc6459561ab2c71dca6c176ce42725d22dd98cc",
+                                                                   "name":  "chevron-right",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:354":  {
+                                                                   "key":  "09f8e748e9659795f082a8913afbf44381dd9ab1",
+                                                                   "name":  "chevron 滑动=true, state 状态=normal 默认, text 文字=false, disabled 禁用=false",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "componentSetId":  "1:341",
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:339":  {
+                                                                   "key":  "8aaf6b691204cdbbb436119c763dff4d99f5af35",
+                                                                   "name":  "chevron-left",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               },
+                                                     "1:6":  {
+                                                                 "key":  "1912c9b7f8792aa2bd0ef8013da6a8e76125d2c0",
+                                                                 "name":  "icon-下拉",
+                                                                 "description":  "",
+                                                                 "remote":  true,
+                                                                 "documentationLinks":  [
+
+                                                                                        ]
+                                                             },
+                                                     "1:11":  {
+                                                                  "key":  "cac19e7afdf918010b6d46ba940a2be2c11e5eca",
+                                                                  "name":  "Property 1=默认, 子级个数=0",
+                                                                  "description":  "",
+                                                                  "remote":  true,
+                                                                  "componentSetId":  "1:10",
+                                                                  "documentationLinks":  [
+
+                                                                                         ]
+                                                              },
+                                                     "1:17":  {
+                                                                  "key":  "eefb5881cbeaacdcbb16ef524d10b190c9f48a29",
+                                                                  "name":  "Property 1=选中, 子级个数=1",
+                                                                  "description":  "",
+                                                                  "remote":  true,
+                                                                  "componentSetId":  "1:10",
+                                                                  "documentationLinks":  [
+
+                                                                                         ]
+                                                              },
+                                                     "1:2077":  {
+                                                                    "key":  "af4b94dac7ca4f8beee21f4f4a23bd262a6f10a1",
+                                                                    "name":  "Property 1=默认, 展开数量=0",
+                                                                    "description":  "",
+                                                                    "remote":  true,
+                                                                    "componentSetId":  "1:2009",
+                                                                    "documentationLinks":  [
+
+                                                                                           ]
+                                                                },
+                                                     "1:2188":  {
+                                                                    "key":  "778dd5ad35803f0307e3534bd4008bb5a77d7d85",
+                                                                    "name":  "Property 1=Default",
+                                                                    "description":  "",
+                                                                    "remote":  true,
+                                                                    "componentSetId":  "1:2187",
+                                                                    "documentationLinks":  [
+
+                                                                                           ]
+                                                                },
+                                                     "1:531":  {
+                                                                   "key":  "02ac06470b844286eed0e96a358bccc27a127a92",
+                                                                   "name":  "chevron-down",
+                                                                   "description":  "",
+                                                                   "remote":  true,
+                                                                   "documentationLinks":  [
+
+                                                                                          ]
+                                                               }
+                                                 },
+                                  "componentSets":  {
+                                                        "1:176":  {
+                                                                      "key":  "ac459e2ad7b92db34618625e0f8976f273fe0372",
+                                                                      "name":  "顶部导航item",
+                                                                      "description":  "",
+                                                                      "remote":  true
+                                                                  },
+                                                        "1:157":  {
+                                                                      "key":  "e7c7ef526b355680a5885f83997237672f629033",
+                                                                      "name":  "设备管理",
+                                                                      "description":  "",
+                                                                      "remote":  true
+                                                                  },
+                                                        "1:211":  {
+                                                                      "key":  "f7f9b1610245b78f126ef7d542bf550e42777fd3",
+                                                                      "name":  "icon",
+                                                                      "description":  "",
+                                                                      "remote":  true
+                                                                  },
+                                                        "1:677":  {
+                                                                      "key":  "72aefeac61ab91b377d9d551f5fed82946dd432b",
+                                                                      "name":  "cardTabs 选项卡-卡片主题",
+                                                                      "description":  "",
+                                                                      "remote":  true
+                                                                  },
+                                                        "1:250":  {
+                                                                      "key":  "b9992bb951622be471d717b43323807ac3109b32",
+                                                                      "name":  "item/cardTabs/top/m",
+                                                                      "description":  "",
+                                                                      "remote":  true
+                                                                  },
+                                                        "1:320":  {
+                                                                      "key":  "9f915f92e7c23210f4221ea4b6cc8e4df6f34f11",
+                                                                      "name":  "item/cardOperate/right/m",
+                                                                      "description":  "",
+                                                                      "remote":  true
+                                                                  },
+                                                        "1:341":  {
+                                                                      "key":  "2d8c1b023ad3ad24e6a89586586d55f0ad0572dc",
+                                                                      "name":  "item/cardOperate/left/m",
+                                                                      "description":  "",
+                                                                      "remote":  true
+                                                                  },
+                                                        "1:10":  {
+                                                                     "key":  "569e082b26245e2803162ed7a46b3e30ae1a2295",
+                                                                     "name":  "侧边导航-二级",
+                                                                     "description":  "",
+                                                                     "remote":  true
+                                                                 },
+                                                        "1:2009":  {
+                                                                       "key":  "826ccb5aa959ab09c135e8a392eb2fc402fc01f3",
+                                                                       "name":  "Component 6",
+                                                                       "description":  "",
+                                                                       "remote":  true
+                                                                   },
+                                                        "1:2187":  {
+                                                                       "key":  "68f5ee8a371c7ea0f1b641ac08e2333114049526",
+                                                                       "name":  "选择煤矿",
+                                                                       "description":  "",
+                                                                       "remote":  true
+                                                                   }
+                                                    },
+                                  "schemaVersion":  0,
+                                  "styles":  {
+                                                 "1:197":  {
+                                                               "key":  "886250c217b204989e18854061f9b4f417575ee8",
+                                                               "name":  "Gray 中性/Gray1",
+                                                               "styleType":  "FILL",
+                                                               "remote":  true,
+                                                               "description":  "1.次要容器背景@bg-color-secondarycontainer\n2.主要容器背景hover/次要层级页面背景hover@bg-color-container-hover"
+                                                           },
+                                                 "1:8":  {
+                                                             "key":  "bbce8d705cc67c2a7867cbd57f8fabc92ad7a861",
+                                                             "name":  "Gray 中性/White",
+                                                             "styleType":  "FILL",
+                                                             "remote":  true,
+                                                             "description":  "主要容器背景/次要层级页面背景@bg-color-container"
+                                                         },
+                                                 "1:209":  {
+                                                               "key":  "9c54aea6be61d9c330b69f75a96e34ebfe9fa7c5",
+                                                               "name":  "Text\u0026Icon/Font Wh1 90%-anti",
+                                                               "styleType":  "FILL",
+                                                               "remote":  true,
+                                                               "description":  "文字反色色彩@text-colort-anti"
+                                                           },
+                                                 "1:239":  {
+                                                               "key":  "b904511585ddecaa3b9b8a9632b9ff46b2bf067c",
+                                                               "name":  "Text\u0026Icon/Font Gy2 60%-secondary",
+                                                               "styleType":  "FILL",
+                                                               "remote":  true,
+                                                               "description":  "次要文字图标色彩@text-color-secondary"
+                                                           },
+                                                 "1:5":  {
+                                                             "key":  "5713747f48d73caddcdbb6f871ecac4d46b3f6af",
+                                                             "name":  "Gray 中性/Gray1",
+                                                             "styleType":  "FILL",
+                                                             "remote":  true,
+                                                             "description":  "1.次要容器背景@bg-color-secondarycontainer\n2.主要容器背景hover/次要层级页面背景hover@bg-color-container-hover"
+                                                         },
+                                                 "1:238":  {
+                                                               "key":  "02d56d9b72a91476bd8f1d23abf522df14ccf7ba",
+                                                               "name":  "Gray 中性/Gray3-分割线",
+                                                               "styleType":  "FILL",
+                                                               "remote":  true,
+                                                               "description":  "1.组件背景/主要容器之上组件背景@bg-color-component\n2.默认组件分割线@component-stroke\n3.主要容器背景click/次要层级页面背景click@bg-color-container-active"
+                                                           },
+                                                 "1:244":  {
+                                                               "key":  "35450a1dc51bf8a84d7a1767a29914effca88db7",
+                                                               "name":  "Brand 品牌/Brand7-Normal",
+                                                               "styleType":  "FILL",
+                                                               "remote":  true,
+                                                               "description":  "@brand-color"
+                                                           },
+                                                 "1:243":  {
+                                                               "key":  "d006ba9c753a306fe780dea3ef4d59cf9e33a245",
+                                                               "name":  "Gray 中性/White",
+                                                               "styleType":  "FILL",
+                                                               "remote":  true,
+                                                               "description":  "主要容器背景/次要层级页面背景@bg-color-container"
+                                                           },
+                                                 "1:156":  {
+                                                               "key":  "57a70f2047def20bd9e969858bc2541284986fbe",
+                                                               "name":  "Gray 中性/White",
+                                                               "styleType":  "FILL",
+                                                               "remote":  true,
+                                                               "description":  "主要容器背景/次要层级页面背景@bg-color-container"
+                                                           },
+                                                 "1:3":  {
+                                                             "key":  "b48ca725d4ad1c2fcee48e5d829099f1fb65167e",
+                                                             "name":  "Text\u0026Icon/Font Wh2 55%",
+                                                             "styleType":  "FILL",
+                                                             "remote":  true,
+                                                             "description":  ""
+                                                         },
+                                                 "1:4":  {
+                                                             "key":  "b7a15538d2a75931585d9ab2fe99bc2bcc6151c9",
+                                                             "name":  "Text\u0026Icon/Font Wh2 55%",
+                                                             "styleType":  "FILL",
+                                                             "remote":  true,
+                                                             "description":  ""
+                                                         },
+                                                 "1:9":  {
+                                                             "key":  "1913e8354cf74d07cdb2f1fd59f392429132c69f",
+                                                             "name":  "Text\u0026Icon/Font Wh2 55%",
+                                                             "styleType":  "FILL",
+                                                             "remote":  true,
+                                                             "description":  ""
+                                                         },
+                                                 "1:2008":  {
+                                                                "key":  "9c116049590d62f9952d416462a8e4af79b3f819",
+                                                                "name":  "Gray 中性/Gray1",
+                                                                "styleType":  "FILL",
+                                                                "remote":  true,
+                                                                "description":  "1.次要容器背景@bg-color-secondarycontainer\n2.主要容器背景hover/次要层级页面背景hover@bg-color-container-hover"
+                                                            },
+                                                 "1:2082":  {
+                                                                "key":  "f90ab2b0086929f94e372eaae9989a0a7a5be97f",
+                                                                "name":  "Text\u0026Icon/Font Wh1 90%-anti",
+                                                                "styleType":  "FILL",
+                                                                "remote":  true,
+                                                                "description":  "文字反色色彩@text-colort-anti"
+                                                            },
+                                                 "1:143":  {
+                                                               "key":  "1f0960f43db088c1a1d4d6d8522f2abbcd464c14",
+                                                               "name":  "Gray 中性/Gray1",
+                                                               "styleType":  "FILL",
+                                                               "remote":  true,
+                                                               "description":  "1.次要容器背景@bg-color-secondarycontainer\n2.主要容器背景hover/次要层级页面背景hover@bg-color-container-hover"
+                                                           }
+                                             }
+                              }
+              }
+}

@@ -1,0 +1,226 @@
+/* 全局样式 */
+page {
+  background-color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* 通用容器 */
+.container {
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+/* 卡片样式 */
+.card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.06);
+}
+
+/* 主色调按钮 */
+.btn-primary {
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 12rpx;
+  padding: 20rpx 40rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.btn-primary:active {
+  background: #43A047;
+}
+
+/* 次级按钮 */
+.btn-secondary {
+  background: #fff;
+  color: #4CAF50;
+  border: 2rpx solid #4CAF50;
+  border-radius: 12rpx;
+  padding: 20rpx 40rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+/* 危险按钮 */
+.btn-danger {
+  background: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 12rpx;
+  padding: 20rpx 40rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+/* 标签样式 */
+.tag {
+  display: inline-block;
+  padding: 6rpx 16rpx;
+  border-radius: 8rpx;
+  font-size: 22rpx;
+  margin-right: 12rpx;
+  margin-bottom: 8rpx;
+}
+
+.tag-green {
+  background: #E8F5E9;
+  color: #4CAF50;
+}
+
+.tag-orange {
+  background: #FFF3E0;
+  color: #FF9800;
+}
+
+.tag-red {
+  background: #FFEBEE;
+  color: #f44336;
+}
+
+.tag-blue {
+  background: #E3F2FD;
+  color: #2196F3;
+}
+
+.tag-gray {
+  background: #F5F5F5;
+  color: #999;
+}
+
+/* 提醒标识 */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36rpx;
+  height: 36rpx;
+  border-radius: 18rpx;
+  padding: 0 12rpx;
+  font-size: 22rpx;
+  color: #fff;
+}
+
+.badge-warning {
+  background: #FF9800;
+}
+
+.badge-danger {
+  background: #f44336;
+}
+
+/* 分隔线 */
+.divider {
+  height: 1rpx;
+  background: #eee;
+  margin: 24rpx 0;
+}
+
+/* 文字省略 */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* flex 布局 */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+/* 间距 */
+.mt-12 { margin-top: 12rpx; }
+.mt-24 { margin-top: 24rpx; }
+.mb-12 { margin-bottom: 12rpx; }
+.mb-24 { margin-bottom: 24rpx; }
+.ml-12 { margin-left: 12rpx; }
+.mr-12 { margin-right: 12rpx; }
+
+/* 文字大小 */
+.text-sm { font-size: 24rpx; }
+.text-base { font-size: 28rpx; }
+.text-lg { font-size: 32rpx; }
+.text-xl { font-size: 36rpx; }
+
+/* 文字颜色 */
+.text-muted { color: #999; }
+.text-primary { color: #4CAF50; }
+.text-warning { color: #FF9800; }
+.text-danger { color: #f44336; }
+
+/* 空状态 */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80rpx 0;
+}
+
+.empty-state image {
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: 24rpx;
+  opacity: 0.4;
+}
+
+.empty-state text {
+  color: #999;
+  font-size: 28rpx;
+}
+
+/* 输入框通用样式 */
+.input-group {
+  margin-bottom: 24rpx;
+}
+
+.input-label {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 12rpx;
+  display: block;
+}
+
+.input-field {
+  width: 100%;
+  height: 80rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 12rpx;
+  padding: 0 24rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.input-field:focus {
+  border-color: #4CAF50;
+}
+
+/* 底部安全区域 */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
