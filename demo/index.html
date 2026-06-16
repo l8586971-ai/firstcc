@@ -215,6 +215,28 @@ svg{display:block}
 .modal-close:hover{background:#f5f7fa}
 .modal-body{flex:1;overflow-y:auto;padding:24px}
 .modal-footer{display:flex;justify-content:flex-end;gap:12px;padding:16px 24px;border-top:1px solid var(--border)}
+/* Edit modal tabs */
+.edit-tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:20px}
+.edit-tab{padding:10px 24px;cursor:pointer;font-size:14px;color:var(--text-secondary);border-bottom:2px solid transparent;margin-bottom:-2px;transition:var(--transition);user-select:none}
+.edit-tab:hover{color:var(--primary)}
+.edit-tab.active{color:var(--primary);border-bottom-color:var(--primary);font-weight:600}
+.edit-tab-panel{display:none}
+.edit-tab-panel.active{display:block}
+/* Edit form grid */
+.edit-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.edit-form-grid.three-col{grid-template-columns:1fr 1fr 1fr}
+.edit-form-grid .form-group-full{grid-column:1/-1}
+/* Sub-table in edit modal */
+.edit-sub-table{margin-top:12px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.edit-sub-table table{width:100%;border-collapse:collapse;font-size:13px}
+.edit-sub-table th{padding:8px 12px;background:#fafafa;font-weight:500;color:var(--text-secondary);text-align:left;border-bottom:1px solid var(--border)}
+.edit-sub-table td{padding:8px 12px;border-bottom:1px solid var(--border)}
+.edit-sub-table .btn-text{font-size:12px;color:var(--primary);cursor:pointer;border:none;background:none;padding:2px 4px}
+.edit-sub-table .btn-text.danger{color:var(--danger)}
+.edit-sub-table-toolbar{display:flex;gap:8px;margin-bottom:12px}
+/* Dynamic form row */
+.edit-dynamic-row{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.edit-dynamic-row .form-input{flex:1;min-width:0}
 
 /* ============ Form ============ */
 .form-group{display:flex;align-items:center;margin-bottom:16px}
@@ -224,6 +246,7 @@ svg{display:block}
 .form-input,.form-textarea{width:100%;padding:7px 12px;border:1px solid var(--border);border-radius:var(--radius);font-size:13px;color:var(--text);font-family:inherit;transition:var(--transition);outline:none}
 .form-input:focus,.form-textarea:focus{border-color:var(--primary);box-shadow:0 0 0 2px rgba(26,115,232,.1)}
 .form-textarea{resize:vertical;min-height:80px}
+.form-group > .form-select,.form-group > .form-input,.form-group > .form-textarea{flex:1}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 
 /* ============ Tooltip ============ */
@@ -363,10 +386,7 @@ svg{display:block}
     <!-- Content -->
     <div class="content-wrapper" id="contentWrapper">
       <div style="margin-bottom:6px">
-        <button class="btn btn-primary" onclick="openDrawer()" style="font-size:13px">打开抽屉</button>
-        <button class="btn btn-default" onclick="closeDrawer()" style="font-size:13px">关闭抽屉</button>
         <button class="btn btn-default" onclick="resetMapView()" style="font-size:13px">重置视图</button>
-        <span style="font-size:12px;color:var(--text-muted);margin-left:8px" id="drawerDebug"></span>
       </div>
       <!-- Map -->
       <div class="map-container" id="mapContainer">
@@ -442,7 +462,7 @@ svg{display:block}
           <button class="tool-icon" title="定位" onclick="locateRiskPoint()">
             <img src="C:\Users\Administrator\Desktop\map-aiming.png" alt="定位">
           </button>
-          <button class="tool-icon" title="编辑" onclick="toast('进入编辑模式')">
+          <button class="tool-icon" title="编辑" onclick="editRiskPoint()">
             <img src="C:\Users\Administrator\Desktop\edit-2.png" alt="编辑">
           </button>
           <button class="tool-icon" title="删除" onclick="deleteRiskPoints()">
@@ -705,6 +725,104 @@ svg{display:block}
     <div class="modal-footer">
       <button class="btn btn-default" onclick="closeModal('confirmModal')">取消</button>
       <button class="btn btn-primary" onclick="closeModal('confirmModal');toast('风险点区域已更新','success')">确定</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======== Modal: 编辑风险点 ======== -->
+<div class="modal-overlay" id="editRiskModal">
+  <div class="modal" style="width:960px">
+    <div class="modal-header">
+      <h3>编辑风险点</h3>
+      <button class="modal-close" onclick="closeModal('editRiskModal')">✕</button>
+    </div>
+    <div class="modal-body" style="padding:16px 24px">
+      <!-- Tabs -->
+      <div class="edit-tabs" id="editTabs">
+        <div class="edit-tab active" data-tab="tab-info" onclick="switchEditTab(this)">风险点信息</div>
+        <div class="edit-tab" data-tab="tab-attr" onclick="switchEditTab(this)" id="tabAttrLabel">属性信息</div>
+        <div class="edit-tab" data-tab="tab-geo" onclick="switchEditTab(this)">隐蔽致灾地质因素</div>
+        <div class="edit-tab" data-tab="tab-project" onclick="switchEditTab(this)" id="tabProjectLabel">单项工程</div>
+      </div>
+
+      <!-- Tab 1: 风险点信息 -->
+      <div class="edit-tab-panel active" id="tab-info">
+        <div class="edit-form-grid">
+          <div class="form-group">
+            <div class="form-label"><span class="required">*</span>风险点</div>
+            <select class="form-select" id="editRiskName"><option>513皮下</option><option>工作面1111</option><option>运输巷1212</option><option>工作面1313</option></select>
+          </div>
+          <div class="form-group">
+            <div class="form-label"><span class="required">*</span>风险点类型</div>
+            <select class="form-select" id="editRiskType" onchange="onEditTypeChange()">
+              <option>运输巷</option><option>综掘工作面</option><option>综采工作面</option><option>炮掘工作面</option><option>设备设施</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <div class="form-label"><span class="required">*</span>责任单位</div>
+            <select class="form-select" id="editDept"><option>机电队</option><option>掘进队</option><option>通风队</option></select>
+          </div>
+          <div class="form-group">
+            <div class="form-label"><span class="required">*</span>风险点责任人</div>
+            <select class="form-select" id="editResponsible"><option>张三</option><option>李四</option><option>王五</option></select>
+          </div>
+          <div class="form-group">
+            <div class="form-label"><span class="required">*</span>排查日期</div>
+            <input type="date" class="form-input" id="editCheckDate" value="2025-06-10">
+          </div>
+          <div class="form-group">
+            <div class="form-label"><span class="required">*</span>开始日期</div>
+            <input type="date" class="form-input" id="editStartDate" value="2025-06-01">
+          </div>
+          <div class="form-group">
+            <div class="form-label"><span class="required">*</span>解除日期</div>
+            <input type="date" class="form-input" id="editEndDate" value="2025-12-31">
+          </div>
+          <div class="form-group form-group-full">
+            <div class="form-label">风险管控措施</div>
+            <textarea class="form-textarea" id="editMeasures" style="min-height:80px"></textarea>
+          </div>
+          <div class="form-group form-group-full">
+            <div class="form-label">位置描述</div>
+            <textarea class="form-textarea" id="editPosition" style="min-height:60px"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: 属性信息 (only for mining faces) -->
+      <div class="edit-tab-panel" id="tab-attr">
+        <div class="edit-form-grid three-col" id="attrFieldsMining"></div>
+      </div>
+
+      <!-- Tab 3: 隐蔽致灾地质因素 -->
+      <div class="edit-tab-panel" id="tab-geo">
+        <div class="edit-sub-table-toolbar">
+          <button class="btn btn-sm btn-primary" onclick="addGeoRow()">+ 添加因素</button>
+        </div>
+        <div class="edit-sub-table">
+          <table>
+            <thead><tr><th style="width:25%">致灾因素</th><th style="width:30%">可能存在风险</th><th style="width:15%">风险等级</th><th style="width:22%">管控措施</th><th style="width:8%">操作</th></tr></thead>
+            <tbody id="geoTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab 3 (alt): 单项工程 (only for non-mining types) -->
+      <div class="edit-tab-panel" id="tab-project">
+        <div class="edit-sub-table-toolbar">
+          <button class="btn btn-sm btn-primary" onclick="addProjectRow()">+ 添加工程</button>
+        </div>
+        <div class="edit-sub-table">
+          <table>
+            <thead><tr><th style="width:20%">工程名称</th><th style="width:12%">工程类型</th><th style="width:12%">开始日期</th><th style="width:12%">结束日期</th><th style="width:18%">责任单位</th><th style="width:12%">责任人</th><th style="width:14%">备注</th><th style="width:8%">操作</th></tr></thead>
+            <tbody id="projectTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-default" onclick="closeModal('editRiskModal')">取消</button>
+      <button class="btn btn-primary" onclick="submitEditRisk()">更新</button>
     </div>
   </div>
 </div>
@@ -1356,6 +1474,259 @@ function deleteRiskPoints() {
   if (confirm(`确定删除选中的 ${checked.length} 个风险点？`)) {
     toast(`已删除 ${checked.length} 个风险点`, 'success')
   }
+}
+
+/* ============ Edit Risk Point ============ */
+let editingRow = null
+
+// Mining face types: 综采工作面、综掘工作面、炮掘工作面
+const MINING_TYPES = ['综采工作面', '综掘工作面', '炮掘工作面']
+
+function isMiningType(type) {
+  return MINING_TYPES.includes(type)
+}
+
+function editRiskPoint() {
+  const checked = document.querySelector('#drawer .row-check:checked')
+  if (!checked) { toast('请先选择表格中的一个风险点', 'warning'); return }
+  editingRow = checked.closest('tr')
+
+  // Read data from the selected row
+  const cells = editingRow.querySelectorAll('td')
+  const name = cells[1]?.textContent?.trim() || ''
+  const type = cells[3]?.textContent?.trim() || ''
+
+  // Populate 风险点信息 tab
+  const sel = function(id, val) {
+    const el = document.getElementById(id)
+    if (!el || el.tagName !== 'SELECT') return
+    for (let i = 0; i < el.options.length; i++) {
+      if (el.options[i].text.trim() === val) { el.selectedIndex = i; return }
+    }
+    // If value not in options, set the text directly for risk name
+    if (id === 'editRiskName') { el.options[0].text = val }
+  }
+  sel('editRiskName', name)
+  sel('editRiskType', type)
+  document.getElementById('editCheckDate').value = '2025-06-10'
+  document.getElementById('editStartDate').value = '2025-06-01'
+  document.getElementById('editEndDate').value = '2025-12-31'
+  document.getElementById('editMeasures').value = ''
+  document.getElementById('editPosition').value = ''
+
+  // Update tabs based on type
+  updateEditTabs(type)
+
+  // Reset tab to first
+  document.querySelectorAll('#editTabs .edit-tab').forEach((t, i) => { t.classList.toggle('active', i === 0) })
+  document.querySelectorAll('.edit-tab-panel').forEach((p, i) => { p.classList.toggle('active', i === 0) })
+
+  openModal('editRiskModal')
+}
+
+function onEditTypeChange() {
+  const type = document.getElementById('editRiskType').value
+  updateEditTabs(type)
+  // Switch to first tab
+  document.querySelectorAll('#editTabs .edit-tab').forEach((t, i) => { t.classList.toggle('active', i === 0) })
+  document.querySelectorAll('.edit-tab-panel').forEach((p, i) => { p.classList.toggle('active', i === 0) })
+}
+
+function updateEditTabs(type) {
+  const mining = isMiningType(type)
+  const tabAttr = document.getElementById('tabAttrLabel')
+  const tabProject = document.getElementById('tabProjectLabel')
+  const tabAttrPanel = document.getElementById('tab-attr')
+  const tabProjectPanel = document.getElementById('tab-project')
+
+  if (mining) {
+    tabAttr.style.display = ''
+    tabProject.style.display = 'none'
+    tabAttrPanel.style.display = ''
+    tabProjectPanel.style.display = 'none'
+    renderAttrFields(type)
+  } else {
+    tabAttr.style.display = 'none'
+    tabProject.style.display = ''
+    tabAttrPanel.style.display = 'none'
+    tabProjectPanel.style.display = ''
+    // Initialize project table
+    if (document.getElementById('projectTableBody').children.length === 0) {
+      addProjectRow()
+    }
+  }
+}
+
+function renderAttrFields(type) {
+  const container = document.getElementById('attrFieldsMining')
+  let fields = []
+
+  if (type === '综采工作面') {
+    fields = [
+      ['工作面长度', 'text', '工作面长度'],
+      ['采煤工艺', 'select', '综合机械化采煤'],
+      ['采高（m）', 'text', '2'],
+      ['剩余采长（m）', 'text', '12'],
+      ['月产量（t）', 'text', '500'],
+      ['巷道支护方式', 'text', '锚杆支护'],
+      ['完整率（%）', 'text', '50'],
+      ['走向长度（m）', 'text', ''],
+      ['倾斜长度（m）', 'text', ''],
+      ['煤层倾角（°）', 'text', ''],
+      ['可采储量（万t）', 'text', ''],
+      ['服务年限（年）', 'text', ''],
+    ]
+  } else if (type === '综掘工作面') {
+    fields = [
+      ['掘进工艺', 'select', '综掘'],
+      ['工作面风量（m³/min）', 'text', '20'],
+      ['顶底板岩性', 'text', '低'],
+      ['巷道断面（m²）', 'text', '12'],
+      ['采煤倾角（°）', 'text', '2'],
+      ['支护方式', 'text', '锚网索联合支护'],
+      ['设计长度（m）', 'text', '12'],
+      ['掘进长度（m）', 'text', '20'],
+      ['局部通风功率（kW）', 'text', '500'],
+      ['煤层厚度（m）', 'text', '5'],
+      ['完整率（%）', 'text', '50'],
+      ['瓦斯等级', 'text', ''],
+      ['煤尘爆炸性', 'text', ''],
+    ]
+  } else if (type === '炮掘工作面') {
+    fields = [
+      ['掘进工艺', 'select', '炮掘'],
+      ['工作面风量（m³/min）', 'text', ''],
+      ['顶底板岩性', 'text', ''],
+      ['巷道断面（m²）', 'text', ''],
+      ['采煤倾角（°）', 'text', ''],
+      ['支护方式', 'text', ''],
+      ['设计长度（m）', 'text', ''],
+      ['掘进长度（m）', 'text', ''],
+      ['局部通风功率（kW）', 'text', ''],
+      ['煤层厚度（m）', 'text', ''],
+      ['完整率（%）', 'text', ''],
+      ['瓦斯等级', 'text', ''],
+      ['煤尘爆炸性', 'text', ''],
+    ]
+  }
+
+  let html = ''
+  const selectOptions = {
+    '采煤工艺': ['综合机械化采煤', '普通机械化采煤', '炮采', '手工采煤'],
+    '掘进工艺': ['综掘', '炮掘', '人工掘进'],
+  }
+
+  fields.forEach(f => {
+    const label = f[0], ftype = f[1], val = f[2]
+    const fieldId = 'attr_' + label.replace(/[（）()%°²³/]/g, '').replace(/\s/g, '_')
+    html += '<div class="form-group"><div class="form-label">' + label + '</div>'
+    if (ftype === 'select') {
+      const opts = selectOptions[label] || []
+      html += '<select class="form-select" id="' + fieldId + '">'
+      opts.forEach(o => html += '<option' + (o === val ? ' selected' : '') + '>' + o + '</option>')
+      html += '</select>'
+    } else {
+      html += '<input type="text" class="form-input" id="' + fieldId + '" value="' + val + '">'
+    }
+    html += '</div>'
+  })
+  container.innerHTML = html
+
+  // Init geo table for mining types
+  initGeoTable()
+}
+
+function initGeoTable() {
+  const tbody = document.getElementById('geoTableBody')
+  if (tbody.children.length > 0) return
+  const defaults = [
+    { factor: '瓦斯', risk: '瓦斯积聚导致中毒、窒息或爆炸', level: '低风险', measure: '加强通风，定期检测瓦斯浓度' },
+    { factor: '水害', risk: '采空区积水透水事故', level: '一般风险', measure: '严格执行探放水制度' },
+    { factor: '火灾', risk: '煤层自燃发火', level: '低风险', measure: '注浆防灭火，监测CO浓度' },
+  ]
+  defaults.forEach(d => addGeoRow(d))
+}
+
+function addGeoRow(data) {
+  const tbody = document.getElementById('geoTableBody')
+  data = data || { factor: '', risk: '', level: '低风险', measure: '' }
+  const levels = ['低风险', '一般风险', '较大风险', '重大风险']
+  const tr = document.createElement('tr')
+  tr.innerHTML = `
+    <td><input type="text" class="form-input" value="${data.factor}" style="width:100%"></td>
+    <td><input type="text" class="form-input" value="${data.risk}" style="width:100%"></td>
+    <td><select class="form-select" style="width:100%">${levels.map(l => '<option' + (l === data.level ? ' selected' : '') + '>' + l + '</option>').join('')}</select></td>
+    <td><input type="text" class="form-input" value="${data.measure}" style="width:100%"></td>
+    <td><button class="btn-text danger" onclick="this.closest('tr').remove()">删除</button></td>
+  `
+  tbody.appendChild(tr)
+}
+
+function addProjectRow(data) {
+  const tbody = document.getElementById('projectTableBody')
+  data = data || { name: '', type: '', sdate: '', edate: '', dept: '', person: '', remark: '' }
+  const tr = document.createElement('tr')
+  tr.innerHTML = `
+    <td><input type="text" class="form-input" value="${data.name}" style="width:100%"></td>
+    <td><input type="text" class="form-input" value="${data.type}" style="width:100%"></td>
+    <td><input type="date" class="form-input" value="${data.sdate}" style="width:100%"></td>
+    <td><input type="date" class="form-input" value="${data.edate}" style="width:100%"></td>
+    <td><input type="text" class="form-input" value="${data.dept}" style="width:100%"></td>
+    <td><input type="text" class="form-input" value="${data.person}" style="width:100%"></td>
+    <td><input type="text" class="form-input" value="${data.remark}" style="width:100%"></td>
+    <td><button class="btn-text danger" onclick="this.closest('tr').remove()">删除</button></td>
+  `
+  tbody.appendChild(tr)
+}
+
+function switchEditTab(el) {
+  const tabName = el.dataset.tab
+  el.parentElement.querySelectorAll('.edit-tab').forEach(t => t.classList.remove('active'))
+  el.classList.add('active')
+  document.querySelectorAll('.edit-tab-panel').forEach(p => p.classList.remove('active'))
+  document.getElementById(tabName).classList.add('active')
+}
+
+function submitEditRisk() {
+  if (!editingRow) { toast('编辑数据异常', 'warning'); return }
+  const typeSel = document.getElementById('editRiskType')
+  const nameSel = document.getElementById('editRiskName')
+  const type = typeSel.value || typeSel.options[typeSel.selectedIndex]?.text || ''
+  const name = nameSel.value || nameSel.options[nameSel.selectedIndex]?.text || ''
+
+  if (!name || name === '模糊查询，选择风险点后除位置描述外的其余字段根据台账中的信息填充') {
+    toast('请选择风险点', 'warning'); return
+  }
+  if (!type) { toast('请选择风险点类型', 'warning'); return }
+
+  // If type changed, ensure tabs are up-to-date
+  const oldType = editingRow.querySelectorAll('td')[3]?.textContent?.trim() || ''
+  if (oldType !== type) {
+    updateEditTabs(type)
+    document.querySelectorAll('#editTabs .edit-tab').forEach((t, i) => { t.classList.toggle('active', i === 0) })
+    document.querySelectorAll('.edit-tab-panel').forEach((p, i) => { p.classList.toggle('active', i === 0) })
+  }
+
+  // Update the drawer table row
+  const cells = editingRow.querySelectorAll('td')
+  if (cells[1]) cells[1].querySelector('.tag-link').textContent = name || '--'
+  if (cells[3]) cells[3].textContent = type
+
+  // Update risk level based on type
+  const levelMap = { '运输巷': '低风险', '综掘工作面': '一般风险', '综采工作面': '较大风险', '炮掘工作面': '一般风险', '设备设施': '重大风险' }
+  const colorMap = { '低风险': 'low', '一般风险': 'general', '较大风险': 'high', '重大风险': 'severe' }
+  const level = levelMap[type] || '低风险'
+  if (cells[2]) {
+    const span = cells[2].querySelector('.risk-level')
+    if (span) {
+      span.textContent = level
+      span.className = 'risk-level ' + (colorMap[level] || 'low')
+    }
+  }
+
+  closeModal('editRiskModal')
+  editingRow = null
+  toast('风险点信息已更新', 'success')
 }
 
 /* ============ Select all ============ */
